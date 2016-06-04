@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RnOpenGApps</string>
+    <string name="cpu">CPU Platform</string>
+    <string name="version">Android Version</string>
+    <string name="pa">Package Variant</string>
+    <string name="start_title">What you should know first...</string>
+    <string name="start">This APP uses resources from The OpenGApps Project(opengapps.org).\n\nIf you can not download today GApps zip, PLEASE CLICK YESTERDAY, then you can get yesterday GApps. \n\nThanks for your using!</string>
+    <string name="start_ok">I know</string>
+    <string name="download">DOWNLOAD</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="use">Click DOWNLOAD to download GApps!</string>
+    <string name="about_menu">ABOUT</string>
+    <string name="about_title">About RnOpenGApps</string>
+    <string name="about">RnOpenGApps is an app for download Gapps from The OpenGApps Project(opengapps.org).\nAll download links are using Github(not mirrors) of opengapps.\nAnd RnOpenGApps is a open source project: \nhttps://github.com/hjthjthjt/RnOpenGApps\n\nAuthor:\nHjtHjtHjt\nhttp://jakting.com</string>
+    <string name="about_ok">OK</string>
+    <string name="enjoy">Enjoy It!</string>
+
+</resources>

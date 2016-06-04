@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/cpu"
+		android:gravity="center"
+		android:id="@+id/cputitle"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<RadioGroup
+			android:layout_below="@id/cputitle"
+			android:id="@+id/androidcpu"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:checkedButton="@+id/arm"
+			android:orientation="horizontal">
+
+			<RadioButton
+				android:id="@+id/arm"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="ARM"/>
+
+			<RadioButton
+				android:id="@+id/arm64"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="ARM64"/>
+
+			<RadioButton
+				android:id="@+id/x86"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="x86"/>
+
+			<RadioButton
+				android:id="@+id/x86_64"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="x86_64"/>
+
+		</RadioGroup>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/version"
+		android:gravity="center"
+		android:id="@+id/versiontitle"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<RadioGroup
+			android:layout_below="@id/versiontitle"
+			android:id="@+id/androidversion"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:checkedButton="@+id/Kitkat"
+			android:orientation="horizontal">
+
+			<RadioButton
+				android:id="@+id/Kitkat"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="4.4"/>
+
+			<RadioButton
+				android:id="@+id/Lollipop0"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="5.0"/>
+
+			<RadioButton
+				android:id="@+id/Lollipop1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="5.1"/>
+
+			<RadioButton
+				android:id="@+id/MarshMallow"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="6.0"/>
+
+		</RadioGroup>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/pa"
+		android:gravity="center"
+		android:id="@+id/varianttitle"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="vertical">
+
+		<RadioGroup
+			android:layout_below="@id/versiontitle"
+			android:id="@+id/androidzip"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:checkedButton="@+id/pico"
+			android:orientation="vertical">
+
+			<RadioButton
+				android:id="@+id/aroma"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="aroma"/>
+
+			<RadioButton
+				android:id="@+id/super0"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="super"/>
+
+			<RadioButton
+				android:id="@+id/stock"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="stock"/>
+
+			<RadioButton
+				android:id="@+id/full"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="full"/>
+
+			<RadioButton
+				android:id="@+id/mini"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="mini"/>
+
+			<RadioButton
+				android:id="@+id/micro"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="micro"/>
+
+			<RadioButton
+				android:id="@+id/nano"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="nano"/>
+
+			<RadioButton
+				android:id="@+id/pico"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="pico"/>
+
+			<RadioButton
+				android:id="@+id/tvstock"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="tvstock"
+				android:enabled="false"/>
+
+		</RadioGroup>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/download"
+			android:text="@string/download"/>
+    </LinearLayout>
+    
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+		<RadioGroup
+            android:id="@+id/date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/today"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today"/>
+            <RadioButton
+                android:id="@+id/yesterday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yesterday"
+                android:enabled="false"/>
+        </RadioGroup>
+        </LinearLayout>
+
+	</LinearLayout>
