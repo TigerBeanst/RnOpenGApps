@@ -1,25 +1,27 @@
 package com.jakting.opengapps;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MenuInflater;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 
 public class MainActivity extends Activity 
 {
     //Set text to show in Toast
     String CPU="arm";
-    String VE="4.4";
+    String VE="5.1";
     String PA="pico";
     //Set text to use
     RadioGroup androidcpu;
@@ -51,18 +53,6 @@ public class MainActivity extends Activity
     RadioButton yesterday;
     
     
-    
-    //Set Download Link
-    Calendar t = Calendar.getInstance();
-    int yi=t.get(Calendar.YEAR);
-    int mi=t.get(Calendar.MONTH)+1;
-    int di=t.get(Calendar.DAY_OF_MONTH);
-    String y=String.valueOf(yi);
-    String m=String.valueOf(mi);
-    String d=String.valueOf(di);
-    
-    
-    
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -70,7 +60,6 @@ public class MainActivity extends Activity
         setContentView(R.layout.main);
         setDownloadLink();
         startDownLoad();
-        monthAddOne();
         dialogWhenStart();
     }
     
@@ -89,15 +78,21 @@ public class MainActivity extends Activity
         builder0.create();
         builder0.show();
     }
-    public void monthAddOne(){
-        if(mi<10){
-            m="0"+m;
-        }
-        if(di<10){
-            d="0"+d;
-        }
-    }
     
+    
+    private String getTodayDateString() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calto = Calendar.getInstance();
+        calto.add(Calendar.DATE, 0);    
+        return dateFormat.format(calto.getTime());
+    }
+    private String getYesterdayDateString() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calye = Calendar.getInstance();
+        calye.add(Calendar.DATE, -1);    
+        return dateFormat.format(calye.getTime());
+    }
+    String dateFinish=getTodayDateString();
     public void setDownloadLink(){
          androidcpu=(RadioGroup)findViewById(R.id.androidcpu);
          androidversion=(RadioGroup)findViewById(R.id.androidversion);
@@ -210,41 +205,13 @@ public class MainActivity extends Activity
                 public void onCheckedChanged(RadioGroup p1, int p2)
                 {
                     if(today.isChecked()){
-                        d=String.valueOf(di);
+                       dateFinish=getTodayDateString();
                     }
                     if(yesterday.isChecked()){
-                        int dii=di;
-                        int mii=mi;
-                        int yii=yi;
-                        if(mii==1){
-                            if(dii==1){
-                                mii--;
-                                dii--;
-                                yii--;
-                            }else{
-                                dii--;
-                            }
-                        }
-                        if(dii==1){
-                            mii--;
-                            dii--;
-                        }else{
-                            dii--;
-                        }
-                        
-                        if(dii<10){
-                            d="0"+dii;
-                        }
-                            d=String.valueOf(dii);
-                        
-                        if(mii<10){
-                            m="0"+mii;
-                        }
-                            m=String.valueOf(mii);
-                        
+                        dateFinish=getYesterdayDateString();
                         
                     }
-
+                    
                 }
 
             });
@@ -253,7 +220,7 @@ public class MainActivity extends Activity
     }
     
     private void urlGet(){
-        Uri uri = Uri.parse("https://github.com/opengapps/"+CPU+"/releases/download/"+y+m+d+"/open_gapps-"+CPU+"-"+VE+"-"+PA+"-"+y+m+d+".zip");
+        Uri uri = Uri.parse("https://github.com/opengapps/"+CPU+"/releases/download/"+dateFinish+"/open_gapps-"+CPU+"-"+VE+"-"+PA+"-"+dateFinish+".zip");
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
     public void startDownLoad(){
