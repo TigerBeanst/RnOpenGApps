@@ -14,6 +14,9 @@
     <string name="use">轻触下载来下载GApps！</string>
     <string name="about_menu">关于</string>
     <string name="about_title">关于氡·OpenGApps</string>
+    <string name="info_menu">版本信息</string>
+    <string name="md5_menu">MD5校验</string>
+    <string name="report_menu">源码反馈</string>
     <string name="about">氡·OpenGApps是一个用于下载The OpenGApps Project(opengapps.org)项目中GApps的应用。\n所有的下载链接均为opengapps的Github链接(非镜像)。\n另外，氡·OpenGApps是一个开源的应用： \nhttps://github.com/hjthjthjt/RnOpenGApps\n\n作者:\nHjtHjtHjt\nhttp://jakting.com</string>
     <string name="about_ok">确定</string>
     <string name="enjoy">感谢使用！</string>

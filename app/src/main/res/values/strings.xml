@@ -14,8 +14,12 @@
     <string name="use">Click DOWNLOAD to download GApps!</string>
     <string name="about_menu">ABOUT</string>
     <string name="about_title">About RnOpenGApps</string>
+    <string name="info_menu">Version Information</string>
+    <string name="md5_menu">MD5 Checksum</string>
+    <string name="report_menu">Sources Report</string>
     <string name="about">RnOpenGApps is an app for download Gapps from The OpenGApps Project(opengapps.org).\nAll download links are using Github(not mirrors) of opengapps.\nAnd RnOpenGApps is a open source project: \nhttps://github.com/hjthjthjt/RnOpenGApps\n\nAuthor:\nHjtHjtHjt\nhttp://jakting.com</string>
     <string name="about_ok">OK</string>
     <string name="enjoy">Enjoy It!</string>
+    
 
 </resources>

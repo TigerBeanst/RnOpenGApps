@@ -219,7 +219,7 @@ public class MainActivity extends Activity
         
     }
     
-    private void urlGet(){
+    private void urlDownloadGet(){
         Uri uri = Uri.parse("https://github.com/opengapps/"+CPU+"/releases/download/"+dateFinish+"/open_gapps-"+CPU+"-"+VE+"-"+PA+"-"+dateFinish+".zip");
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
@@ -229,10 +229,31 @@ public class MainActivity extends Activity
                 @Override
                 public void onClick(View p1)
                 {
-                    urlGet();
+                    urlDownloadGet();
                 }
             });
     }
+    private void urlMD5Get(){
+        Uri urimd5 = Uri.parse("https://github.com/opengapps/"+CPU+"/releases/download/"+dateFinish+"/open_gapps-"+CPU+"-"+VE+"-"+PA+"-"+dateFinish+".zip.md5");
+        startActivity(new Intent(Intent.ACTION_VIEW,urimd5));
+    }
+    public void startMD5DownLoad(){
+        urlMD5Get();
+    }
+    private void urlReGet(){
+        Uri urire = Uri.parse("https://github.com/opengapps/"+CPU+"/releases/download/"+dateFinish+"/sources_report-"+CPU+"-"+VE+"-"+dateFinish+".txt");
+        startActivity(new Intent(Intent.ACTION_VIEW,urire));
+    }
+    public void startReDownLoad(){
+        urlReGet();
+    }
+    private void urlInfoGet(){
+        Uri uriin = Uri.parse("https://github.com/opengapps/"+CPU+"/releases/download/"+dateFinish+"/open_gapps-"+CPU+"-"+VE+"-"+PA+"-"+dateFinish+".versionlog.txt");
+        startActivity(new Intent(Intent.ACTION_VIEW,uriin));
+    }
+    public void startInfoDownLoad(){
+        urlInfoGet();
+        }
     
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
@@ -241,6 +262,15 @@ public class MainActivity extends Activity
     }
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
+            case R.id.info_menu:
+                startInfoDownLoad();
+                return true;
+            case R.id.md5_menu:
+                startMD5DownLoad();
+                return true;
+            case R.id.report_menu:
+                startReDownLoad();
+                return true;
             case R.id.about_menu:
                 openAbout();
                 return true;
