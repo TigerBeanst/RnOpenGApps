@@ -116,7 +116,7 @@ public class MainActivity extends Activity
          ll0=(RadioButton)findViewById(R.id.Lollipop0);
          ll1=(RadioButton)findViewById(R.id.Lollipop1);
          mm=(RadioButton)findViewById(R.id.MarshMallow);
-        mm=(RadioButton)findViewById(R.id.Nougat);
+         no=(RadioButton)findViewById(R.id.Nougat);
         //Set Package
          aroma=(RadioButton)findViewById(R.id.aroma);
          super0=(RadioButton)findViewById(R.id.super0);
