@@ -38,6 +38,7 @@ public class MainActivity extends Activity
     RadioButton ll0;
     RadioButton ll1;
     RadioButton mm;
+    RadioButton no;
     //Set Package
     RadioButton aroma;
     RadioButton super0;
@@ -51,6 +52,7 @@ public class MainActivity extends Activity
     //Set for Download
     RadioButton today;
     RadioButton yesterday;
+    RadioButton thedaybeforeyesterday;
     
     
     @Override
@@ -92,6 +94,12 @@ public class MainActivity extends Activity
         calye.add(Calendar.DATE, -1);    
         return dateFormat.format(calye.getTime());
     }
+    private String getTheDayBeforeYesterdayDateString() {
+    DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+    Calendar calye = Calendar.getInstance();
+    calye.add(Calendar.DATE, -2);
+    return dateFormat.format(calye.getTime());
+}
     String dateFinish=getTodayDateString();
     public void setDownloadLink(){
          androidcpu=(RadioGroup)findViewById(R.id.androidcpu);
@@ -108,6 +116,7 @@ public class MainActivity extends Activity
          ll0=(RadioButton)findViewById(R.id.Lollipop0);
          ll1=(RadioButton)findViewById(R.id.Lollipop1);
          mm=(RadioButton)findViewById(R.id.MarshMallow);
+        mm=(RadioButton)findViewById(R.id.Nougat);
         //Set Package
          aroma=(RadioButton)findViewById(R.id.aroma);
          super0=(RadioButton)findViewById(R.id.super0);
@@ -121,6 +130,7 @@ public class MainActivity extends Activity
          //Set for Download
          today=(RadioButton)findViewById(R.id.today);
          yesterday=(RadioButton)findViewById(R.id.yesterday);
+        yesterday=(RadioButton)findViewById(R.id.thedaybeforeyesterday);
         
         androidcpu.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
 
@@ -159,6 +169,9 @@ public class MainActivity extends Activity
                     }
                     if(mm.isChecked()){
                         VE="6.0";
+                    }
+                    if(no.isChecked()){
+                        VE="7.0";
                     }
 
                 }
@@ -209,8 +222,10 @@ public class MainActivity extends Activity
                     }
                     if(yesterday.isChecked()){
                         dateFinish=getYesterdayDateString();
-                        
                     }
+                    if(thedaybeforeyesterday.isChecked()){
+                    dateFinish=getTheDayBeforeYesterdayDateString();
+                }
                     
                 }
 

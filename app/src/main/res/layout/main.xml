@@ -97,6 +97,11 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="6.0"/>
+			<RadioButton
+				android:id="@+id/Nougat"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="7.0"/>
 
 		</RadioGroup>
 
@@ -214,6 +219,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/yesterday"
                 />
+			<RadioButton
+				android:id="@+id/thedaybeforeyesterday"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/thedaybeforeyesterday"
+				/>
         </RadioGroup>
         </LinearLayout>
 

@@ -11,6 +11,7 @@
     <string name="download">下载</string>
     <string name="today">今日</string>
     <string name="yesterday">昨日</string>
+    <string name="thedaybeforeyesterday">前日</string>
     <string name="use">轻触下载来下载GApps！</string>
     <string name="about_menu">关于</string>
     <string name="about_title">关于氡·OpenGApps</string>
