@@ -96,9 +96,9 @@ public class MainActivity extends Activity
     }
     private String getTheDayBeforeYesterdayDateString() {
     DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-    Calendar calye = Calendar.getInstance();
-    calye.add(Calendar.DATE, -2);
-    return dateFormat.format(calye.getTime());
+    Calendar caltd = Calendar.getInstance();
+    caltd.add(Calendar.DATE, -2);
+    return dateFormat.format(caltd.getTime());
 }
     String dateFinish=getTodayDateString();
     public void setDownloadLink(){
