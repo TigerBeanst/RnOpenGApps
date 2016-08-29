@@ -220,10 +220,10 @@
                 android:text="@string/yesterday"
                 />
 			<RadioButton
-				android:id="@+id/thedaybeforeyesterday"
+				android:id="@+id/tdbyesterday"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="@string/thedaybeforeyesterday"
+				android:text="@string/tdbyesterday"
 				/>
         </RadioGroup>
         </LinearLayout>

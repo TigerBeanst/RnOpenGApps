@@ -11,7 +11,7 @@
     <string name="download">DOWNLOAD</string>
     <string name="today">Today</string>
     <string name="yesterday">Yesterday</string>
-    <string name="thedaybeforeyesterday">The day before yesterday</string>
+    <string name="tdbyesterday">The day before yesterday</string>
     <string name="use">Click DOWNLOAD to download GApps!</string>
     <string name="about_menu">ABOUT</string>
     <string name="about_title">About RnOpenGApps</string>

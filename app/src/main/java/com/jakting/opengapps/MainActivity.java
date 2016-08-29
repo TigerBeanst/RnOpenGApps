@@ -52,7 +52,7 @@ public class MainActivity extends Activity
     //Set for Download
     RadioButton today;
     RadioButton yesterday;
-    RadioButton thedaybeforeyesterday;
+    RadioButton tdbyesterday;
     
     
     @Override
@@ -130,7 +130,7 @@ public class MainActivity extends Activity
          //Set for Download
          today=(RadioButton)findViewById(R.id.today);
          yesterday=(RadioButton)findViewById(R.id.yesterday);
-        yesterday=(RadioButton)findViewById(R.id.thedaybeforeyesterday);
+         tdbyesterday=(RadioButton)findViewById(R.id.tdbyesterday);
         
         androidcpu.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
 
@@ -223,7 +223,7 @@ public class MainActivity extends Activity
                     if(yesterday.isChecked()){
                         dateFinish=getYesterdayDateString();
                     }
-                    if(thedaybeforeyesterday.isChecked()){
+                    if(tdbyesterday.isChecked()){
                     dateFinish=getTheDayBeforeYesterdayDateString();
                 }
                     
