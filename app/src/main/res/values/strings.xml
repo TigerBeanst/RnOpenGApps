@@ -6,7 +6,7 @@
     <string name="version">Android Version</string>
     <string name="pa">Package Variant</string>
     <string name="start_title">What you should know first...</string>
-    <string name="start">This APP uses resources from The OpenGApps Project(opengapps.org).\n\nIf you can not download today GApps zip, PLEASE CLICK YESTERDAY, then you can get yesterday GApps. \n\nThanks for your using!</string>
+    <string name="start">This APP uses resources from The OpenGApps Project(<a href="opengapps.org">opengapps.org</a>).\n\nIf you can not download today GApps zip, PLEASE CLICK YESTERDAY, then you can get yesterday GApps. \n\nThanks for your using!</string>
     <string name="start_ok">I know</string>
     <string name="download">DOWNLOAD</string>
     <string name="today">Today</string>
@@ -18,7 +18,7 @@
     <string name="info_menu">Version Information</string>
     <string name="md5_menu">MD5 Checksum</string>
     <string name="report_menu">Sources Report</string>
-    <string name="about">RnOpenGApps is an app for download Gapps from The OpenGApps Project(opengapps.org).\nAll download links are using Github(not mirrors) of opengapps.\nAnd RnOpenGApps is a open source project: \nhttps://github.com/hjthjthjt/RnOpenGApps\n\nAuthor:\nHjtHjtHjt\nhttp://jakting.com</string>
+    <string name="about">RnOpenGApps is an app for download Gapps from The OpenGApps Project(<a href="opengapps.org">opengapps.org</a>).\nAll download links are using Github(not mirrors) of opengapps.\nAnd RnOpenGApps is a open source project: \n<a href="https://github.com/hjthjthjt/RnOpenGApps">https://github.com/hjthjthjt/RnOpenGApps</a>\n\nAuthor:\nHjtHjtHjt\n<a href="http://jakting.com">http://jakting.com</a></string>
     <string name="about_ok">OK</string>
     <string name="enjoy">Enjoy It!</string>
     

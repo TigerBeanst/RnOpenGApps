@@ -41,7 +41,7 @@ public final class R {
         public static final int report_menu=0x7f08001f;
         public static final int stock=0x7f080012;
         public static final int super0=0x7f080011;
-        public static final int thedaybeforeyesterday=0x7f08001c;
+        public static final int tdbyesterday=0x7f08001c;
         public static final int today=0x7f08001a;
         public static final int tvstock=0x7f080017;
         public static final int varianttitle=0x7f08000d;
@@ -75,7 +75,7 @@ public final class R {
         public static final int start=0x7f06000c;
         public static final int start_ok=0x7f06000d;
         public static final int start_title=0x7f06000e;
-        public static final int thedaybeforeyesterday=0x7f06000f;
+        public static final int tdbyesterday=0x7f06000f;
         public static final int today=0x7f060010;
         public static final int use=0x7f060011;
         public static final int version=0x7f060012;

@@ -8,7 +8,7 @@ android {
         applicationId "com.jakting.opengapps"
         minSdkVersion 19
         targetSdkVersion 22
-        versionCode 3
+        versionCode 4
         versionName "1.2"
     }
 
