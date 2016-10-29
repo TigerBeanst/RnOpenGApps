@@ -97,11 +97,18 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="6.0"/>
+			
 			<RadioButton
 				android:id="@+id/Nougat"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="7.0"/>
+			
+			<RadioButton
+				android:id="@+id/Nougat1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="7.1"/>
 
 		</RadioGroup>
 
@@ -179,8 +186,7 @@
 				android:id="@+id/tvstock"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="tvstock"
-				android:enabled="false"/>
+				android:text="tvstock"/>
 
 		</RadioGroup>
 

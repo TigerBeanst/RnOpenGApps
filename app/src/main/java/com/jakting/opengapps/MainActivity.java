@@ -39,6 +39,7 @@ public class MainActivity extends Activity
     RadioButton ll1;
     RadioButton mm;
     RadioButton no;
+	RadioButton no1;
     //Set Package
     RadioButton aroma;
     RadioButton super0;
@@ -117,6 +118,7 @@ public class MainActivity extends Activity
          ll1=(RadioButton)findViewById(R.id.Lollipop1);
          mm=(RadioButton)findViewById(R.id.MarshMallow);
          no=(RadioButton)findViewById(R.id.Nougat);
+		 no1=(RadioButton)findViewById(R.id.Nougat1);
         //Set Package
          aroma=(RadioButton)findViewById(R.id.aroma);
          super0=(RadioButton)findViewById(R.id.super0);
@@ -172,6 +174,9 @@ public class MainActivity extends Activity
                     }
                     if(no.isChecked()){
                         VE="7.0";
+                    }
+					if(no1.isChecked()){
+                        VE="7.1";
                     }
 
                 }
