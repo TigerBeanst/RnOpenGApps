@@ -69,6 +69,7 @@ public final class R {
         public static final int cpu=0x7f050001;
         public static final int download=0x7f050007;
         public static final int enjoy=0x7f050013;
+        public static final int gapps_links=0x7f050014;
         public static final int info_menu=0x7f05000e;
         public static final int md5_menu=0x7f05000f;
         public static final int pa=0x7f050003;

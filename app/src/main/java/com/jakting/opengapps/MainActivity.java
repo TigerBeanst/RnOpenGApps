@@ -78,6 +78,15 @@ public class MainActivity extends Activity
                     Toast.makeText(MainActivity.this,getString(R.string.use),Toast.LENGTH_LONG).show();
                 }
             });
+		builder0.setNegativeButton(getString(R.string.gapps_links), new DialogInterface.OnClickListener(){
+
+                @Override
+                public void onClick(DialogInterface p1, int p2)
+                {
+                    Uri gappslinks = Uri.parse("https://jakting.com/archives/gapps-links-what.html");
+					startActivity(new Intent(Intent.ACTION_VIEW,gappslinks));
+                }
+            });
         builder0.create();
         builder0.show();
     }
@@ -308,6 +317,15 @@ public class MainActivity extends Activity
                 public void onClick(DialogInterface p1, int p2)
                 {
                     Toast.makeText(MainActivity.this,getString(R.string.enjoy),Toast.LENGTH_LONG).show();
+                }
+            });
+		builder.setNegativeButton(getString(R.string.gapps_links), new DialogInterface.OnClickListener(){
+
+                @Override
+                public void onClick(DialogInterface p1, int p2)
+                {
+                    Uri gappslinks0 = Uri.parse("https://jakting.com/archives/gapps-links-what.html");
+					startActivity(new Intent(Intent.ACTION_VIEW,gappslinks0));
                 }
             });
         builder.create();

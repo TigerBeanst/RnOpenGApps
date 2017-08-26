@@ -18,9 +18,10 @@
     <string name="info_menu">Version Information</string>
     <string name="md5_menu">MD5 Checksum</string>
     <string name="report_menu">Sources Report</string>
-    <string name="about">RnOpenGApps is an app for download Gapps from The OpenGApps Project(<a href="opengapps.org">opengapps.org</a>).\nAll download links are using Github(not mirrors) of opengapps.\nAnd RnOpenGApps is a open source project: \n<a href="https://github.com/hjthjthjt/RnOpenGApps">https://github.com/hjthjthjt/RnOpenGApps</a>\n\nAuthor:\nHjtHjtHjt\n<a href="http://jakting.com">http://jakting.com</a></string>
+    <string name="about">RnOpenGApps is an app for download Gapps from The OpenGApps Project(<a href="opengapps.org">opengapps.org</a>).\nAll download links are using Github(not mirrors) of opengapps.\nAnd RnOpenGApps is a open source project: \n<a href="https://github.com/hjthjthjt/RnOpenGApps">https://github.com/hjthjthjt/RnOpenGApps</a>\n\nAuthor:\nHjtHjtHjt\n<a href="https://jakting.com">https://jakting.com</a></string>
     <string name="about_ok">OK</string>
     <string name="enjoy">Enjoy It!</string>
+	<string name="gapps_links">GApps Version</string>
     
 
 </resources>
