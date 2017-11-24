@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/cpu"
+        android:gravity="center"
+        android:id="@+id/cputitle"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/platform_set"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/platform_version"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/version"
+        android:gravity="center"
+        android:id="@+id/versiontitle"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/android_set"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/android_version"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/pa"
+        android:gravity="center"
+        android:id="@+id/varianttitle"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_below="@id/versiontitle"
+            android:id="@+id/androidzip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/pico"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/aroma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aroma"/>
+
+            <RadioButton
+                android:id="@+id/super0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="super"/>
+
+            <RadioButton
+                android:id="@+id/stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stock"/>
+
+            <RadioButton
+                android:id="@+id/full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="full"/>
+
+            <RadioButton
+                android:id="@+id/mini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mini"/>
+
+            <RadioButton
+                android:id="@+id/micro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="micro"/>
+
+            <RadioButton
+                android:id="@+id/nano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nano"/>
+
+            <RadioButton
+                android:id="@+id/pico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pico"/>
+
+            <RadioButton
+                android:id="@+id/tvstock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tvstock"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/today"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today"/>
+            <RadioButton
+                android:id="@+id/yesterday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yesterday"
+                />
+            <RadioButton
+                android:id="@+id/tdbyesterday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tdbyesterday"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_height="50dp"
+            android:layout_width="250dp"
+            android:id="@+id/download"
+            android:text="@string/download"/>
+    </LinearLayout>
+
+</LinearLayout>
