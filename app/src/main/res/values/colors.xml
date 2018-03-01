@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#009385</color>
+    <color name="colorPrimaryDark">#008579</color>
+    <color name="colorAccent">#009385</color>
+    <color name="darker_green">#4CAF50</color>
+    <color name="darker_teal">#009688</color>
+    <color name="warning">#F44336</color>
+    <color name="suw_background">@color/colorPrimary</color>
+    <color name="suw_status_bar">@color/colorPrimaryDark</color>
+    <!-- General colors -->
+
+    <color name="suw_color_accent_dark">#ff448aff</color>
+    <color name="suw_color_accent_light">#ff3367d6</color>
+    <color name="suw_link_color_dark">#ff448aff</color>
+    <color name="suw_link_color_light">#ff3367d6</color>
+    <color name="suw_list_item_icon_color_dark">#b3ffffff</color>
+    <color name="suw_list_item_icon_color_light">#89000000</color>
+    <color name="suw_progress_bar_color_dark">#ffffcd40</color>
+    <color name="suw_progress_bar_color_light">#fff4b400</color>
+
+    <!-- On versions < 23, we cannot reference other theme values in a color resource. Default to
+         the framework default of 12% black -->
+    <color name="suw_flat_button_highlight">#1f000000</color>
+
+    <!-- Navigation bar colors -->
+
+    <color name="suw_navbar_bg_dark">#ff21272b</color>
+    <color name="suw_navbar_bg_light">#ffe4e7e9</color>
+
+    <!-- GLIF colors -->
+    <color name="suw_color_accent_glif_dark">#ff4285f4</color>
+    <color name="suw_color_accent_glif_light">#ff4285f4</color>
 </resources>

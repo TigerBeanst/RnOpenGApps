@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_main" />
+        <item
+            android:id="@+id/nav_device"
+            android:icon="@drawable/ic_phone"
+            android:title="@string/menu_device" />
+        <item
+            android:id="@+id/nav_star"
+            android:icon="@drawable/ic_star"
+            android:title="@string/menu_star" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info"
+            android:title="@string/title_about" />
+    </group>
+
+    <item android:title="@string/menu_other">
+        <menu>
+            <item
+                android:id="@+id/nav_gapps"
+                android:icon="@drawable/ic_menu_google"
+                android:title="@string/gapps_version" />
+            <!--<item
+                android:id="@+id/nav_donate"
+                android:icon="@drawable/ic_payment"
+                android:title="@string/donate" />-->
+        </menu>
+    </item>
+
+</menu>

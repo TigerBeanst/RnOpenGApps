@@ -1,26 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">氡·OpenGApps</string>
-    <string name="cpu">CPU 平台</string>
-    <string name="version">Android 版本</string>
-    <string name="pa">GApps 包类型</string>
-    <string name="start_title">首先你得知道...</string>
-    <string name="start">本应用所使用的资源均来自The OpenGApps Project(opengapps.org)项目。\n\n如果您不能下载本日的GApps，请点击“昨日”按钮，您将可以下载到昨日的GApps。 \n\n感谢您的使用！</string>
-    <string name="start_ok">我知道了</string>
-    <string name="download">下载</string>
-    <string name="today">今日</string>
-    <string name="yesterday">昨日</string>
-    <string name="tdbyesterday">前日</string>
-    <string name="use">轻触下载来下载GApps！</string>
-    <string name="about_menu">关于</string>
-    <string name="about_title">关于氡·OpenGApps</string>
-    <string name="info_menu">版本信息</string>
-    <string name="md5_menu">MD5校验</string>
-    <string name="report_menu">源码反馈</string>
-    <string name="about">氡·OpenGApps是一个用于下载The OpenGApps Project(opengapps.org)项目中GApps的应用。\n所有的下载链接均为opengapps的Github链接(非镜像)。\n另外，氡·OpenGApps是一个开源的应用： \nhttps://github.com/hjthjthjt/RnOpenGApps\n\n作者:\nHjtHjtHjt\nhttps://jakting.com</string>
-    <string name="about_ok">确定</string>
-    <string name="enjoy">感谢使用！</string>
-	<string name="gapps_links">GApps 各版本差异</string>
 
+    <string name="navigation_drawer_open">打开导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
+    <string name="action_reset">重置向导</string>
+
+    <!--First Wizard-->
+    <string name="suw_wellcome_title">欢迎使用 RnOpenGApps</string>
+    <string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 或是 sourceforge 来获取最新的 OpenGApps 版本下载地址。\n为 Android 8.1 所准备的 OpenGApps 是由 nezorflame 制作的非官方版(仅限 ARM/ARM64 设备)。\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置这些内容。</string>
+    <string name="suw_android_verison_title">Android 版本</string>
+    <string name="suw_android_version">自动选择: Android</string>
+    <string name="suw_cpu_title">CPU 平台</string>
+    <string name="suw_cpu">自动选择:</string>
+    <string name="suw_var_title">包类型</string>
+    <string name="suw_final_title">祝贺你！</string>
+    <string name="suw_final">你已经配置好所有东西了！\n\n现在，开始下载 OpenGApps！\n\n如果你支持我的工作，在 Android 商店中给我个好评就行！\n\n五星怎么样 :)</string>
+
+    <!--Drawer-->
+    <string name="drawer_dev">由 hjthjthjt 开发</string>
+    <string name="menu_main">首页</string>
+    <string name="menu_device">设备</string>
+    <string name="menu_star">评分</string>
+    <string name="menu_star_message">为何不...给我个五星？</string>
+    <string name="menu_star_go">GO!</string>
+    <string name="menu_other">其它</string>
+    <string name="gapps_version">GApps 类型</string>
+    <string name="donate">捐助我！</string>
+
+    <!--Main-->
+    <string name="my_device">我的设备</string>
+    <string name="gapps_ok">GApps 已被成功安装！</string>
+    <string name="gapps_warning">GApps 没有被安装！</string>
+    <string name="loading">加载中...</string>
+    <string name="latest_release">最新版本，针对</string>
+    <string name="no_support">很抱歉，你的设备不受支持。</string>
+    <string name="download_confirm">下载确认</string>
+    <string name="download_confirm_1">点击下载按钮来享受这一切。\n\n在此之前，请确认这些信息。\n\nAndroid 版本-----</string>
+    <string name="download_confirm_2">\nCPU 平台-----</string>
+    <string name="download_confirm_3">\n包类型-----</string>
+    <string name="download_confirm_4">\n\n哪里错了么？点击向导来修正它们。</string>
+    <string name="download">下载</string>
+    <string name="correct">向导</string>
+
+
+    <!--About-->
+    <string name="title_about">关于</string>
+    <string name="about_version_label">版本</string>
+    <string name="about_developers_label">开发者</string>
+    <string name="about_libraries_label">使用的开源库</string>
+    <string name="about_source_label">Github 开源代码</string>
+    <string name="about_tran_label">帮助翻译</string>
+    <string name="about_tran_mess">你想让这个应用使用你的母语吗？为何不来帮助我翻译它！点击\"访问\"来翻译它们，并给我发个 PR ！</string>
+    <string name="about_tran_ok">访问</string>
+
+    <!--Donate-->
+    <!--<string name="alipay">支付宝</string>
+    <string name="alipay_click">点击此处打开支付宝应用</string>
+    <string name="google_play">Google Play 捐赠包</string>
+    <string name="google_play_click">点击此处打开 Google Play 来捐赠</string>
+    <string name="tem_dis">暂不支持。</string>-->
 </resources>
