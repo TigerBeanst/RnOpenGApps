@@ -94,32 +94,13 @@ public class MainFragment extends Fragment {
     private void whichOne(){
         String inRel = a_v;
         String inCPU = c_u;
-        if(inRel.equals("8.1") && inCPU.contains("arm64")){
-            getLatest_ARM64_81();
-        }else if(inRel.equals("8.1") && inCPU.equals("arm")){
-            getLatest_ARM_81();
-        }else if(inRel.equals("8.1") && inCPU.contains("x86")){
-            progress = 100;
-            TextView status_latest = (TextView)getActivity().findViewById(R.id.status_latest);
-            status_latest.setText(getString(R.string.no_support));
-            ProgressBar progressBar = (ProgressBar)getActivity().findViewById(R.id.progress_bar);
-            if(progress ==100){
-                progressBar.setVisibility(View.INVISIBLE);
-                ImageView status_github = (ImageView)getActivity().findViewById(R.id.status_github);
-                status_github.setImageResource(R.drawable.ic_highlight);
-                status_github.setVisibility(View.VISIBLE);
-                FrameLayout status_container1 = (FrameLayout)getActivity().findViewById(R.id.status_container1);
-                status_container1.setBackgroundResource(R.color.warning);
-                TextView status_latest_w = (TextView)getActivity().findViewById(R.id.status_latest);
-                status_latest_w.setTextColor(this.getResources().getColor(R.color.warning));
-            }
-        }else if(!(inRel.equals("8.1")) && inCPU.contains("armeabi")){
+        if(inCPU.contains("armeabi")){
             getLatest_ARM();
-        }else if(!(inRel.equals("8.1")) && inCPU.contains("arm64")){
+        }else if(inCPU.contains("arm64")){
             getLatest_ARM64();
-        }else if(!(inRel.equals("8.1")) && inCPU.equals("x86_64")){
+        }else if(inCPU.equals("x86_64")){
             getLatest_x86_64();
-        }else if(!(inRel.equals("8.1")) && inCPU.equals("x86")){
+        }else if(inCPU.equals("x86")){
             getLatest_x86();
         }
     }
@@ -132,13 +113,8 @@ public class MainFragment extends Fragment {
         Aldialog.setPositiveButton(R.string.download, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if(a_v.equals("8.1")){
-                    Uri download_url_81 = Uri.parse("https://iweb.dl.sourceforge.net/project/unofficial-opengapps-8-1/"+c_u+"/"+date+"/open_gapps-"+c_u+"-8.1-"+v_r+"-"+date+"-UNOFFICIAL.zip");
-                    startActivity(new Intent(Intent.ACTION_VIEW,download_url_81));
-                }else{
-                    Uri download_url = Uri.parse("https://github.com/opengapps/"+c_u+"/releases/download/"+date+"/open_gapps-"+c_u+"-"+a_v+"-"+v_r+"-"+date+".zip");
-                    startActivity(new Intent(Intent.ACTION_VIEW,download_url));
-                }
+                Uri download_url = Uri.parse("https://github.com/opengapps/"+c_u+"/releases/download/"+date+"/open_gapps-"+c_u+"-"+a_v+"-"+v_r+"-"+date+".zip");
+                startActivity(new Intent(Intent.ACTION_VIEW,download_url));
             }
         });
         Aldialog.setNeutralButton(R.string.correct, new DialogInterface.OnClickListener() {
@@ -189,128 +165,6 @@ public class MainFragment extends Fragment {
 
 
     public int progress = 0; //通用的存进度数值，虽然并没有什么卵用
-
-    public String arm64_81;
-    public void getLatest_ARM64_81(){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                HttpURLConnection connection = null;
-                BufferedReader reader = null;
-                try{
-                    URL url = new URL("https://sourceforge.net/projects/unofficial-opengapps-8-1/best_release.json");
-                    connection = (HttpURLConnection)url.openConnection();
-                    connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(99999);
-                    connection.setReadTimeout(99999);
-                    connection.setRequestProperty("User-agent","Mozilla/5.0 (Windows; U; Windows NT 5.2;. en-US) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.108 Safari/537.36 Quark/2.4.1.985");
-                    InputStream in = connection.getInputStream();
-                    reader = new BufferedReader(new InputStreamReader(in));
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while((line = reader.readLine()) !=null){
-                        response.append(line);
-                    }
-                    arm64_81 = response.toString();
-                    JSONObject json = new JSONObject(arm64_81);
-                    JSONObject jsonA = json.optJSONObject("release");
-                    String date_save;
-                    date_save = jsonA.optString("date");
-                    String versionA = date_save;
-                    String year = versionA.substring(0,4);
-                    String month = versionA.substring(5,7);
-                    String day = versionA.substring(8,10);
-                    String version = year + month + day;
-                    save_data.putString("date",version).apply();
-                    progress = 100;
-                    TextView status_latest = (TextView)getActivity().findViewById(R.id.status_latest);
-                    status_latest.setText(getString(R.string.latest_release)+" ARM64(UNOFFICAL): "+version);
-                    ProgressBar progressBar = (ProgressBar)getActivity().findViewById(R.id.progress_bar);
-                    if(progress ==100){
-                        progressBar.setVisibility(View.INVISIBLE);
-                        ImageView status_sf = (ImageView)getActivity().findViewById(R.id.status_github);
-                        status_sf.setImageResource(R.drawable.ic_sourceforge);
-                        status_sf.setVisibility(View.VISIBLE);
-                        do_card.setClickable(true);
-                    }
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
-                    if(reader!=null){
-                        try{
-                            reader.close();
-                        }catch (IOException e){
-                            e.printStackTrace();
-                        }
-                    }
-                    if(connection!=null){
-                        connection.disconnect();
-                    }
-                }
-            }
-        }).start();
-    }
-    public String arm_81;
-    public void getLatest_ARM_81(){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                HttpURLConnection connection = null;
-                BufferedReader reader = null;
-                try{
-                    URL url = new URL("https://sourceforge.net/projects/unofficial-opengapps-8-1/best_release.json");
-                    connection = (HttpURLConnection)url.openConnection();
-                    connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(99999);
-                    connection.setReadTimeout(99999);
-                    connection.setRequestProperty("User-agent","Mozilla/5.0 (Windows; U; Windows NT 5.2;. en-US) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.108 Safari/537.36 Quark/2.4.1.985");
-                    InputStream in = connection.getInputStream();
-                    reader = new BufferedReader(new InputStreamReader(in));
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while((line = reader.readLine()) !=null){
-                        response.append(line);
-                    }
-                    arm_81 = response.toString();
-                    JSONObject json = new JSONObject(arm_81);
-                    JSONObject jsonA = json.optJSONObject("release");
-                    String date_save;
-                    date_save = jsonA.optString("date");
-                    String versionA = date_save;
-                    String year = versionA.substring(0,4);
-                    String month = versionA.substring(5,7);
-                    String day = versionA.substring(8,10);
-                    String version = year + month + day;
-                    save_data.putString("date",version).apply();
-                    progress = 100;
-                    TextView status_latest = (TextView)getActivity().findViewById(R.id.status_latest);
-                    status_latest.setText(getString(R.string.latest_release)+" ARM(UNOFFICAL): "+version);
-                    ProgressBar progressBar = (ProgressBar)getActivity().findViewById(R.id.progress_bar);
-                    if(progress ==100){
-                        progressBar.setVisibility(View.INVISIBLE);
-                        ImageView status_sf = (ImageView)getActivity().findViewById(R.id.status_github);
-                        status_sf.setImageResource(R.drawable.ic_sourceforge);
-                        status_sf.setVisibility(View.VISIBLE);
-                        do_card.setClickable(true);
-                    }
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
-                    if(reader!=null){
-                        try{
-                            reader.close();
-                        }catch (IOException e){
-                            e.printStackTrace();
-                        }
-                    }
-                    if(connection!=null){
-                        connection.disconnect();
-                    }
-                }
-            }
-        }).start();
-    }
-
 
     public String arm64;
     public void getLatest_ARM64(){

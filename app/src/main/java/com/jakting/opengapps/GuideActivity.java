@@ -119,11 +119,7 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
                 initLayout(viewGroup, R.layout.suw_android_verison, R.string.suw_android_verison_title, true);
                 getDeviceInfo();
                 TextView auto_andversion = (TextView)findViewById(R.id.auto_andversion);
-                if(osRel.equals("8.1")){
-                    auto_andversion.setText(getString(R.string.suw_android_version)+" "+osRel+" (UNOFFICAL)");
-                }else{
-                    auto_andversion.setText(getString(R.string.suw_android_version)+" "+osRel);
-                }
+                auto_andversion.setText(getString(R.string.suw_android_version)+" "+osRel);
                 editAndroidRadio();
                 RadioGroup radio_and = (RadioGroup)findViewById(R.id.radio_and);
                 radio_and.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

@@ -5,16 +5,16 @@
     <string name="navigation_drawer_close">关闭导航抽屉</string>
     <string name="action_reset">重置向导</string>
 
-    <!--First Wizard-->
+    <!--First Run Setup Wizard-->
     <string name="suw_wellcome_title">欢迎使用 RnOpenGApps</string>
-    <string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 或是 sourceforge 来获取最新的 OpenGApps 版本下载地址。\n为 Android 8.1 所准备的 OpenGApps 是由 nezorflame 制作的非官方版(仅限 ARM/ARM64 设备)。\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置这些内容。</string>
+    <string name="suw_wellcome">此应用从 The OpenGApps Project (opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>
     <string name="suw_android_verison_title">Android 版本</string>
     <string name="suw_android_version">自动选择: Android</string>
     <string name="suw_cpu_title">CPU 平台</string>
     <string name="suw_cpu">自动选择:</string>
     <string name="suw_var_title">包类型</string>
     <string name="suw_final_title">祝贺你！</string>
-    <string name="suw_final">你已经配置好所有东西了！\n\n现在，开始下载 OpenGApps！\n\n如果你支持我的工作，在 Android 商店中给我个好评就行！\n\n五星怎么样 :)</string>
+    <string name="suw_final">你已经配置好所有东西了！\n\n现在，开始下载 OpenGApps！\n\n如果你支持我的工作，在 Google Play 中给我个好评就行！\n\n五星怎么样 :)</string>
 
     <!--Drawer-->
     <string name="drawer_dev">由 hjthjthjt 开发</string>
@@ -50,8 +50,8 @@
     <string name="about_libraries_label">使用的开源库</string>
     <string name="about_source_label">Github 开源代码</string>
     <string name="about_tran_label">帮助翻译</string>
-    <string name="about_tran_mess">你想让这个应用使用你的母语吗？为何不来帮助我翻译它！点击\"访问\"来翻译它们，并给我发个 PR ！</string>
-    <string name="about_tran_ok">访问</string>
+    <string name="about_tran_mess">你想让这个应用使用你的母语吗？为何不来帮助我翻译它！点击\"访问翻译页面\"来翻译它们。记得给我发个 Pull Request ！</string>
+    <string name="about_tran_ok">访问翻译页面</string>
 
     <!--Donate-->
     <!--<string name="alipay">支付宝</string>
