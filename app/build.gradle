@@ -6,8 +6,8 @@ android {
         applicationId "com.jakting.opengapps"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 20180301
-        versionName "2.0.1"
+        versionCode 20180403
+        versionName "2.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

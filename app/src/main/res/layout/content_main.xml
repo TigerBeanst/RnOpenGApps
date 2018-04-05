@@ -1,266 +1,340 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_gravity="center_vertical"
-    android:orientation="horizontal"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:id="@+id/contain_main"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.jakting.opengapps.MainActivity">
+    android:layout_width="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/state_card"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/contain_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:cardBackgroundColor="@color/darker_green"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="@dimen/cardview_default_radius"
-        app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true">
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.jakting.opengapps.MainActivity">
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
+            android:id="@+id/state_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/darker_green"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
 
-            <FrameLayout
-                android:id="@+id/status_container"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:foregroundGravity="center"
-                android:orientation="vertical"
-                android:background="@color/darker_green">
-
-                <ImageView
-                    android:id="@+id/status_icon"
-                    android:layout_width="84dp"
-                    android:layout_height="84dp"
-                    android:layout_gravity="center"
-                    android:visibility="visible"
-                    android:src="@drawable/ic_check_circle" />
-
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/status_text"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@android:color/white"
-                android:gravity="center"
-                android:padding="6dp"
-                android:textColor="@color/darker_green"
-                android:textStyle="bold"
-                android:visibility="visible"
-                android:text="@string/gapps_ok" />
+                android:orientation="vertical">
 
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+                <FrameLayout
+                    android:id="@+id/status_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/darker_green"
+                    android:foregroundGravity="center"
+                    android:orientation="vertical">
 
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        card_view:layout_constraintTop_toBottomOf="@+id/state_card"
-        android:id="@+id/state_latest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        app:cardBackgroundColor="@color/darker_teal"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="@dimen/cardview_default_radius"
-        app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true">
+                    <ImageView
+                        android:id="@+id/status_icon"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_check_circle"
+                        android:visibility="visible" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                </FrameLayout>
 
-            <FrameLayout
-                android:id="@+id/status_container1"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:foregroundGravity="center"
-                android:orientation="vertical"
-                android:background="@color/darker_teal">
-
-                <ImageView
-                    android:id="@+id/status_github"
-                    android:layout_width="74dp"
-                    android:layout_height="74dp"
+                <TextView
+                    android:id="@+id/status_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_github"
-                    android:visibility="invisible"/>
-
-                <ProgressBar
-                    android:theme="@style/AppTheme.WhiteAccent"
-                    android:id="@+id/progress_bar"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/gapps_ok"
+                    android:textColor="@color/darker_green"
+                    android:textStyle="bold"
                     android:visibility="visible" />
 
-            </FrameLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-            <TextView
-                android:id="@+id/status_latest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@android:color/white"
-                android:gravity="center"
-                android:padding="6dp"
-                android:textColor="@color/darker_teal"
-                android:textStyle="bold"
-                android:visibility="visible"
-                android:text="@string/loading" />
-
-
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        card_view:layout_constraintTop_toBottomOf="@+id/state_latest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="@dimen/cardview_default_radius"
-        app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true">
-
-        <LinearLayout
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/state_latest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:clickable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/darker_teal"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            card_view:layout_constraintTop_toBottomOf="@+id/state_card">
 
-            <TextView
-                android:id="@+id/textView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="6dp"
-                android:text="@string/my_device"
-                android:textAllCaps="true"
-                android:textStyle="bold"/>
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/status_container1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/darker_teal"
+                    android:foregroundGravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/status_github"
+                        android:layout_width="74dp"
+                        android:layout_height="74dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_download"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:theme="@style/AppTheme.WhiteAccent"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/status_latest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/loading"
+                    android:textColor="@color/darker_teal"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            card_view:layout_constraintTop_toBottomOf="@+id/state_latest"
+            tools:layout_editor_absoluteX="16dp">
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_android"/>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="@string/my_device"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginStart="32dp"
-                    android:orientation="vertical"
-                    android:paddingBottom="8dp"
-                    android:paddingTop="8dp">
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
 
-                    <TextView
-                        android:id="@+id/my_device_sdk"
-                        android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_android" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        tools:text="Android 8.0.0 (API 26)"/>
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/my_device_sdk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            tools:text="Android 8.0.0 (API 26)" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_phone"/>
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginStart="32dp"
-                    android:orientation="vertical"
-                    android:paddingBottom="8dp"
-                    android:paddingTop="8dp">
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
 
-                    <TextView
-                        android:id="@+id/my_device_model"
-                        android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_phone" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        tools:text="ONEPLUS A5000"/>
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/my_device_model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            tools:text="ONEPLUS A5000" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_chip"/>
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginStart="32dp"
-                    android:orientation="vertical"
-                    android:paddingBottom="8dp"
-                    android:paddingTop="8dp">
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
 
-                    <TextView
-                        android:id="@+id/my_device_cpu"
-                        android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_chip" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        tools:text="arm64"/>
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/my_device_cpu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            tools:text="arm64" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
+
             </LinearLayout>
 
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardView_wait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardView"
+            tools:layout_editor_absoluteX="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="@string/notices"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:id="@+id/notice_click">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_menu_google"
+                        android:tint="#757575"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/notice_click1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:text="@string/notices_con" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

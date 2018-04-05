@@ -119,11 +119,7 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
                 initLayout(viewGroup, R.layout.suw_android_verison, R.string.suw_android_verison_title, true);
                 getDeviceInfo();
                 TextView auto_andversion = (TextView)findViewById(R.id.auto_andversion);
-                if(osRel.equals("8.1")){
-                    auto_andversion.setText(getString(R.string.suw_android_version)+" "+osRel+" (UNOFFICAL)");
-                }else{
-                    auto_andversion.setText(getString(R.string.suw_android_version)+" "+osRel);
-                }
+                auto_andversion.setText(getString(R.string.suw_android_version)+" "+osRel);
                 editAndroidRadio();
                 RadioGroup radio_and = (RadioGroup)findViewById(R.id.radio_and);
                 radio_and.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -132,6 +128,10 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
                         RadioButton rad_and=(RadioButton)findViewById(i);
                         String save_and = rad_and.getText().toString();
                         osRel = save_and.substring(8,11);
+                        if(osRel.equals("4.4")){
+                            SharedPreferences.Editor sharedPreferences = getSharedPreferences("data",MODE_PRIVATE).edit();
+                            sharedPreferences.putString("android_version","4.4");
+                        }
                     }
                 });
                 break;
@@ -179,9 +179,7 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
         RadioButton a71=(RadioButton)findViewById(R.id.Android71);
         RadioButton a80=(RadioButton)findViewById(R.id.Android80);
         RadioButton a81=(RadioButton)findViewById(R.id.Android81);
-        if(osRel.equals("4.4")){
-            a44.setChecked(true);
-        }else if(osRel.equals("5.0")){
+        if(osRel.equals("5.0")){
             a50.setChecked(true);
         }else if(osRel.equals("5.1")){
             a51.setChecked(true);
@@ -204,6 +202,11 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
         RadioButton arm64=(RadioButton)findViewById(R.id.arm64);
         RadioButton x86=(RadioButton)findViewById(R.id.x86);
         RadioButton x86_64=(RadioButton)findViewById(R.id.x86_64);
+        SharedPreferences sharedPreferences = getSharedPreferences("data",MODE_PRIVATE);
+        String osRR = sharedPreferences.getString("android_version","");
+        if(osRR.equals("4.4")){
+            arm64.setEnabled(false);
+        }
         if(osCPUU.equals("arm")){
             arm.setChecked(true);
         }else if(osCPUU.equals("arm64")){
@@ -217,8 +220,34 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
     }
 
     public void editPackageRadio(){
+        SharedPreferences sharedPreferences = getSharedPreferences("data",MODE_PRIVATE);
+        String osRR = sharedPreferences.getString("android_version","");
+        String osCC = sharedPreferences.getString("cpu","");
+        RadioButton superA=(RadioButton)findViewById(R.id.superV);
+        RadioButton full=(RadioButton)findViewById(R.id.full);
+        RadioButton mini=(RadioButton)findViewById(R.id.mini);
         RadioButton micro=(RadioButton)findViewById(R.id.micro);
-        micro.setChecked(true);
+        RadioButton aroma=(RadioButton)findViewById(R.id.aroma);
+        RadioButton stock=(RadioButton)findViewById(R.id.stock);
+        RadioButton nano=(RadioButton)findViewById(R.id.nano);
+        RadioButton tvstock=(RadioButton)findViewById(R.id.tvstock);
+        if(osRR.equals("7.0") || osRR.equals("6.0") || osRR.equals("5.1") || osRR.equals("5.0") || osRR.equals("4.4")){
+            superA.setEnabled(false);
+            full.setEnabled(false);
+            mini.setEnabled(false);
+            micro.setEnabled(false);
+            if (osRR.equals("5.1")){
+                aroma.setEnabled(false);
+            }
+            if (osRR.equals("5.0") || osRR.equals("4.4")){
+                aroma.setEnabled(false);
+                stock.setEnabled(false);
+                tvstock.setEnabled(false);
+            }
+            nano.setChecked(true);
+        }else{
+            micro.setChecked(true);
+        }
     }
 
    /* private void clickAlipay(){
