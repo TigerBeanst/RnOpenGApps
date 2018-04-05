@@ -33,6 +33,7 @@
     <string name="gapps_warning">GApps have not been installed!</string>
     <string name="loading">Loading...</string>
     <string name="latest_release">Latest Release For</string>
+    <string name="latest_release_end">\nClick here to download.</string>
     <string name="no_support">Sorry,your device is not supported.</string>
     <string name="download_confirm">Download Confirm</string>
     <string name="download_confirm_1">Click DOWNLOAD to enjoy.\n\nBefore that, please confirm these informations.\n\nAndroid Version-----</string>
@@ -41,6 +42,9 @@
     <string name="download_confirm_4">\n\nIs there something wrong? Click WIZARD to correct them.</string>
     <string name="download">DOWNLOAD</string>
     <string name="correct">WIZARD</string>
+    <string name="wait">Wait for getting the latest OpenGApps Version. The speed of loading depends on how fast you connect to Github...</string>
+    <string name="notices">NOTICE</string>
+    <string name="notices_con">If you do not know how to choose GApps Package, just click here.</string>
 
 
     <!--About-->

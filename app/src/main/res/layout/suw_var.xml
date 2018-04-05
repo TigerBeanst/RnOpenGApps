@@ -28,7 +28,7 @@
             android:id="@+id/superV"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:text="super"/>
+            android:text="super" />
         <RadioButton
             android:id="@+id/stock"
             android:layout_width="wrap_content"

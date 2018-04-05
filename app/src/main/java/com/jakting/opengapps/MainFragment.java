@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -64,10 +65,20 @@ public class MainFragment extends Fragment {
         do_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickDownload();
+                if(!(progress==0)){
+                    clickDownload();
+                }
             }
         });
         setHasOptionsMenu(true);
+        LinearLayout clickGApps = (LinearLayout)getActivity().findViewById(R.id.notice_click);
+        clickGApps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri gappsurl =  Uri.parse("https://jakting.com/archives/gapps-links-what.html");
+                startActivity(new Intent(Intent.ACTION_VIEW,gappsurl));
+            }
+        });
 
     }
 
@@ -94,15 +105,7 @@ public class MainFragment extends Fragment {
     private void whichOne(){
         String inRel = a_v;
         String inCPU = c_u;
-        if(inCPU.contains("armeabi")){
-            getLatest_ARM();
-        }else if(inCPU.contains("arm64")){
-            getLatest_ARM64();
-        }else if(inCPU.equals("x86_64")){
-            getLatest_x86_64();
-        }else if(inCPU.equals("x86")){
-            getLatest_x86();
-        }
+        getLatest();
     }
 
     private void clickDownload(){
@@ -114,7 +117,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Uri download_url = Uri.parse("https://github.com/opengapps/"+c_u+"/releases/download/"+date+"/open_gapps-"+c_u+"-"+a_v+"-"+v_r+"-"+date+".zip");
-                startActivity(new Intent(Intent.ACTION_VIEW,download_url));
+                    startActivity(new Intent(Intent.ACTION_VIEW,download_url));
             }
         });
         Aldialog.setNeutralButton(R.string.correct, new DialogInterface.OnClickListener() {
@@ -166,15 +169,16 @@ public class MainFragment extends Fragment {
 
     public int progress = 0; //通用的存进度数值，虽然并没有什么卵用
 
-    public String arm64;
-    public void getLatest_ARM64(){
+    public String apiData;
+    public void getLatest(){
         new Thread(new Runnable() {
             @Override
             public void run() {
+                String cpu_what = c_u;
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
                 try{
-                    URL url = new URL("https://api.github.com/repos/opengapps/arm64/releases/latest");
+                    URL url = new URL("https://api.github.com/repos/opengapps/"+cpu_what+"/releases/latest");
                     connection = (HttpURLConnection)url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(8000);
@@ -186,177 +190,18 @@ public class MainFragment extends Fragment {
                     while((line = reader.readLine()) !=null){
                         response.append(line);
                     }
-                    arm64 = response.toString();
-                    JSONObject json = new JSONObject(arm64);
+                    apiData = response.toString();
+                    JSONObject json = new JSONObject(apiData);
                     String version = json.getString("tag_name");
                     save_data.putString("date",version).apply();
                     progress = 100;
                     TextView status_latest = (TextView)getActivity().findViewById(R.id.status_latest);
-                    status_latest.setText(getString(R.string.latest_release)+" ARM64: "+version);
+                    status_latest.setText(getString(R.string.latest_release)+" "+cpu_what+": "+version);
                     ProgressBar progressBar = (ProgressBar)getActivity().findViewById(R.id.progress_bar);
-                    if(progress ==100){
+                    if(progress == 100){
                         progressBar.setVisibility(View.INVISIBLE);
                         ImageView status_github = (ImageView)getActivity().findViewById(R.id.status_github);
-                        status_github.setImageResource(R.drawable.ic_github);
-                        status_github.setVisibility(View.VISIBLE);
-                        do_card.setClickable(true);
-                    }
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
-                    if(reader!=null){
-                        try{
-                            reader.close();
-                        }catch (IOException e){
-                            e.printStackTrace();
-                        }
-                    }
-                    if(connection!=null){
-                        connection.disconnect();
-                    }
-                }
-            }
-        }).start();
-    }
-
-    public String arm;
-    public void getLatest_ARM(){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                HttpURLConnection connection = null;
-                BufferedReader reader = null;
-                try{
-                    URL url = new URL("https://api.github.com/repos/opengapps/arm/releases/latest");
-                    connection = (HttpURLConnection)url.openConnection();
-                    connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(8000);
-                    connection.setReadTimeout(8000);
-                    InputStream in = connection.getInputStream();
-                    reader = new BufferedReader(new InputStreamReader(in));
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while((line = reader.readLine()) !=null){
-                        response.append(line);
-                    }
-                    arm = response.toString();
-                    JSONObject json = new JSONObject(arm);
-                    String version = json.getString("tag_name");
-                    save_data.putString("date",version).apply();
-                    progress = 100;
-                    TextView status_latest = (TextView)getActivity().findViewById(R.id.status_latest);
-                    status_latest.setText(getString(R.string.latest_release)+" ARM: "+version);
-                    ProgressBar progressBar = (ProgressBar)getActivity().findViewById(R.id.progress_bar);
-                    if(progress ==100){
-                        progressBar.setVisibility(View.INVISIBLE);
-                        ImageView status_github = (ImageView)getActivity().findViewById(R.id.status_github);
-                        status_github.setImageResource(R.drawable.ic_github);
-                        status_github.setVisibility(View.VISIBLE);
-                        do_card.setClickable(true);
-                    }
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
-                    if(reader!=null){
-                        try{
-                            reader.close();
-                        }catch (IOException e){
-                            e.printStackTrace();
-                        }
-                    }
-                    if(connection!=null){
-                        connection.disconnect();
-                    }
-                }
-            }
-        }).start();
-    }
-
-    public String x86;
-    public void getLatest_x86(){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                HttpURLConnection connection = null;
-                BufferedReader reader = null;
-                try{
-                    URL url = new URL("https://api.github.com/repos/opengapps/x86/releases/latest");
-                    connection = (HttpURLConnection)url.openConnection();
-                    connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(8000);
-                    connection.setReadTimeout(8000);
-                    InputStream in = connection.getInputStream();
-                    reader = new BufferedReader(new InputStreamReader(in));
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while((line = reader.readLine()) !=null){
-                        response.append(line);
-                    }
-                    x86 = response.toString();
-                    JSONObject json = new JSONObject(x86);
-                    String version = json.getString("tag_name");
-                    save_data.putString("date",version).apply();
-                    progress = 100;
-                    TextView status_latest = (TextView)getActivity().findViewById(R.id.status_latest);
-                    status_latest.setText(getString(R.string.latest_release)+" x86: "+version);
-                    ProgressBar progressBar = (ProgressBar)getActivity().findViewById(R.id.progress_bar);
-                    if(progress ==100){
-                        progressBar.setVisibility(View.INVISIBLE);
-                        ImageView status_github = (ImageView)getActivity().findViewById(R.id.status_github);
-                        status_github.setImageResource(R.drawable.ic_github);
-                        status_github.setVisibility(View.VISIBLE);
-                        do_card.setClickable(true);
-                    }
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
-                    if(reader!=null){
-                        try{
-                            reader.close();
-                        }catch (IOException e){
-                            e.printStackTrace();
-                        }
-                    }
-                    if(connection!=null){
-                        connection.disconnect();
-                    }
-                }
-            }
-        }).start();
-    }
-
-    public String x86_64;
-    public void getLatest_x86_64(){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                HttpURLConnection connection = null;
-                BufferedReader reader = null;
-                try{
-                    URL url = new URL("https://api.github.com/repos/opengapps/arm/releases/latest");
-                    connection = (HttpURLConnection)url.openConnection();
-                    connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(8000);
-                    connection.setReadTimeout(8000);
-                    InputStream in = connection.getInputStream();
-                    reader = new BufferedReader(new InputStreamReader(in));
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while((line = reader.readLine()) !=null){
-                        response.append(line);
-                    }
-                    x86_64 = response.toString();
-                    JSONObject json = new JSONObject(x86_64);
-                    String version = json.getString("tag_name");
-                    save_data.putString("date",version).apply();
-                    progress = 100;
-                    TextView status_latest = (TextView)getActivity().findViewById(R.id.status_latest);
-                    status_latest.setText(getString(R.string.latest_release)+" x86_64: "+version);
-                    ProgressBar progressBar = (ProgressBar)getActivity().findViewById(R.id.progress_bar);
-                    if(progress ==100){
-                        progressBar.setVisibility(View.INVISIBLE);
-                        ImageView status_github = (ImageView)getActivity().findViewById(R.id.status_github);
-                        status_github.setImageResource(R.drawable.ic_github);
+                        status_github.setImageResource(R.drawable.ic_download);
                         status_github.setVisibility(View.VISIBLE);
                         do_card.setClickable(true);
                     }
