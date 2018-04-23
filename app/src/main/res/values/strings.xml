@@ -5,23 +5,23 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_reset">Reset Wizard</string>
 
-    <!--First Wizard-->
+    <!--First Run Setup Wizard-->
     <string name="suw_wellcome_title">Welcome to RnOpenGApps</string>
-    <string name="suw_wellcome">This application uses resources from The OpenGApps Project(opengapps.org).\n\nIt will connect Github to get the downlink of the latest release.\n\nDo not worry, you can configure them agin by click \"Reset Wizard\" later.</string>
+    <string name="suw_wellcome">This application uses resources from The OpenGApps Project (opengapps.org).\n\nIt will connect to Github to fetch info about latest OpenGApps package releases.\n\nDo not worry, you can configure package settings again by clicking \"Reset Wizard\" later.</string>
     <string name="suw_android_verison_title">Android Version</string>
     <string name="suw_android_version">Auto select: Android</string>
     <string name="suw_cpu_title">CPU Platform</string>
     <string name="suw_cpu">Auto select:</string>
     <string name="suw_var_title">Package Variant</string>
     <string name="suw_final_title">Congratulations!</string>
-    <string name="suw_final">You have configurated everything!\n\nNow,download OpenGApps!\n\nIf you support my work, just rate this app in Android Market!\n\nWhat about five star :)</string>
+    <string name="suw_final">You have configured everything!\n\nNow,download OpenGApps!\n\nIf you support my work, just rate this app on Google Play!\n\nWhat about five stars :)</string>
 
     <!--Drawer-->
     <string name="drawer_dev">Developed By hjthjthjt</string>
     <string name="menu_main">Main</string>
     <string name="menu_device">Device</string>
     <string name="menu_star">Rate</string>
-    <string name="menu_star_message">Why not...Give me a FIVE star?</string>
+    <string name="menu_star_message">Why not... give me FIVE stars?</string>
     <string name="menu_star_go">GO!</string>
     <string name="menu_other">Others</string>
     <string name="gapps_version">GApps Version</string>
@@ -54,13 +54,13 @@
     <string name="about_libraries_label">Used Libraries</string>
     <string name="about_source_label">Github Open Source</string>
     <string name="about_tran_label">Help Translation</string>
-    <string name="about_tran_mess">Do you want this app using your native language? Why not try to translate!Click \'Visit values\' to translate and start a pr!</string>
-    <string name="about_tran_ok">Visit values</string>
+    <string name="about_tran_mess">Do you want this app to use your native language? Why not try to translate! Click \'Visit Localization Page\' to translate. Remember to open a Pull Request!</string>
+    <string name="about_tran_ok">Visit Localization Page</string>
 
     <!--Donate-->
     <!--<string name="alipay">Alipay</string>
     <string name="alipay_click">Click here to open Alipay App.</string>
     <string name="google_play">Google Play Donation</string>
     <string name="google_play_click">Click here to open Google Play to donate.</string>
-    <string name="tem_dis">Temporary dissupport.</string>-->
+    <string name="tem_dis">Temporarily Unsupported.</string>-->
 </resources>
