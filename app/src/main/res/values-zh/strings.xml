@@ -42,6 +42,7 @@
     <string name="download_confirm_4">\n\n哪里错了么？点击向导来修正它们。</string>
     <string name="download">下载</string>
     <string name="correct">向导</string>
+    <string name="checkMD5">检查 MD5</string>
     <string name="wait">正在获取最新版本，请稍后。加载速度取决于你连接 Github 的速度...</string>
     <string name="notices">注意</string>
     <string name="notices_con">如果你不知道如何选择 GApps 包，点这儿看看。</string>

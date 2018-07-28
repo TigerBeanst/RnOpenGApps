@@ -42,6 +42,7 @@
     <string name="download_confirm_4">\n\nЧто-то не так? Нажми Мастер установки чтобы исправить.</string>
     <string name="download">ЗАГРУЗКА</string>
     <string name="correct">Мастер</string>
+    <string name="checkMD5">ПРОВЕРЬТЕ MD5</string>
     <string name="wait">Дождитесь получения последней версии OpenGApps. Скорость загрузки зависит от скорости подключения к Github...</string>
     <string name="notices">Уведомления</string>
     <string name="notices_con">Если ты не знаешь какой выбрать архив GApps, просто нажми сюда.</string>
