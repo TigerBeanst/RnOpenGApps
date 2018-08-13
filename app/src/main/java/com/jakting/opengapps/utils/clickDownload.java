@@ -11,8 +11,8 @@ import com.jakting.opengapps.GuideActivity;
 import com.jakting.opengapps.R;
 
 
-public class clickDownload {
-    public static void clickDownload(Context context,SharedPreferences data_of_download, SharedPreferences data_of_download_md5){
+public class ClickDownload {
+    public static void ClickDownload(final Context context, final SharedPreferences data_of_download){
         /**
          * 性感下载，在线猛击。
          *
@@ -21,6 +21,9 @@ public class clickDownload {
          */
 
         final String date = data_of_download.getString("date","");
+        final String a_v = data_of_download.getString("android_version","");
+        final String c_u = data_of_download.getString("cpu","");
+        final String v_r = data_of_download.getString("var","");
         AlertDialog.Builder Aldialog = new AlertDialog.Builder(context);
         Aldialog.setTitle(context.getString(R.string.download_confirm));
         Aldialog.setMessage(context.getString(R.string.download_confirm_1)+a_v+context.getString(R.string.download_confirm_2)+c_u+context.getString(R.string.download_confirm_3)+v_r+context.getString(R.string.download_confirm_4));
@@ -31,17 +34,13 @@ public class clickDownload {
                 context.startActivity(new Intent(Intent.ACTION_VIEW,download_url));
             }
         });
-        Aldialog.setNegativeButton(R.string.checkMD5, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                showMD5();
-            }
-        });
         Aldialog.setNeutralButton(R.string.correct, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                SharedPreferences.Editor firstRun = context.getSharedPreferences("data", Context.MODE_PRIVATE).edit();
+                firstRun.putBoolean("firstRun",false);
                 Intent resetWizard = new Intent(context,GuideActivity.class);
-                startActivity(resetWizard);
+                context.startActivity(resetWizard);
             }
         });
         AlertDialog al = Aldialog.create();

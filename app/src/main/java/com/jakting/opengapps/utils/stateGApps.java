@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 import com.jakting.opengapps.R;
 
-public class stateGApps {
-    public static void stateGApps(Context context, View view) {
+public class StateGApps {
+    public static void StateGApps(Context context, View view) {
         /**
          * 根据当前设备 Google 套件的安装情况决定首页状态一栏的显示内容。
          *
@@ -18,7 +18,7 @@ public class stateGApps {
          */
 
         //判断是否安装 GMS
-        boolean stateofGApps = isInstall.isInstall(context, "com.google.android.gms");
+        boolean stateofGApps = IsInstall.IsInstall(context, "com.google.android.gms");
 
         ImageView status_icon = (ImageView) view.findViewById(R.id.status_icon);
         FrameLayout status_container = (FrameLayout) view.findViewById(R.id.status_container);

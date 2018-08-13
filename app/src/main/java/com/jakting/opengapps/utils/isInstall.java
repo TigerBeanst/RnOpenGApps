@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
-public class isInstall {
-    public static boolean isInstall(Context context,String packageName){
+public class IsInstall {
+    public static boolean IsInstall(Context context,String packageName){
         /**
          * 判断是否安装某应用，借助包名判断，代码可适用于其他情况
          *

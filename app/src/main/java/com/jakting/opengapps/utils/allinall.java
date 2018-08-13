@@ -3,10 +3,14 @@ package com.jakting.opengapps.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
+import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 
-public class allinall {
-    public static void allinall(Context context, View view) {
+import com.jakting.opengapps.R;
+
+public class AllInAll {
+    public static void allinall(final Context context, final View view) {
         /**
          * 声明变量，调用函数，执行一堆方法。
          *
@@ -28,26 +32,34 @@ public class allinall {
         int osSDK = android.os.Build.VERSION.SDK_INT;
 
         //
-        SharedPreferences data_of_download;
-        SharedPreferences data_of_download_md5;
+        final SharedPreferences data_of_download;
         data_of_download = context.getSharedPreferences("data", Context.MODE_PRIVATE);
-        data_of_download_md5 = context.getSharedPreferences("dataMD5", Context.MODE_PRIVATE);
 
-        String a_v;
-        String c_u;
-        String v_r;
+/*        String a_v = data_of_download.getString("android_version","");
+        String c_u = data_of_download.getString("cpu","");
+        String v_r = data_of_download.getString("var","");*/
 
+
+        CardView do_card = (CardView)view.findViewById(R.id.state_latest);
         /**
          * 正片开始
          */
+
+        //首次运行
+        FirstRun.FirstRun(context,view,data_of_download);
+
         //根据当前设备信息显示内容
-        myDeviceInfo.myDeviceInfo(view, osModel, osCPU, osRelease, osSDK);
+        MyDeviceInfo.MyDeviceInfo(view, osModel, osCPU, osRelease, osSDK);
 
         //根据当前设备 Google 套件的安装情况决定首页状态一栏的显示内容
-        stateGApps.stateGApps(context, view);
+        StateGApps.StateGApps(context, view);
 
-        //性感下载，在线猛击
-        clickDownload.clickDownload(context, data_of_download, data_of_download_md5);
+        //获取最新下载地址
+        GetLatest.GetLatest(context, view, data_of_download);
+
+
+
+
 
     }
 }

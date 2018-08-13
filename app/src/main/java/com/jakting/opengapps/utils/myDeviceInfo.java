@@ -5,8 +5,8 @@ import android.widget.TextView;
 
 import com.jakting.opengapps.R;
 
-public class myDeviceInfo {
-    public static void myDeviceInfo(View view, String osModel, String osCPU, String osRelease, int osSDK) {
+public class MyDeviceInfo {
+    public static void MyDeviceInfo(View view, String osModel, String osCPU, String osRelease, int osSDK) {
         /**
          * 根据当前设备信息显示内容。
          *
