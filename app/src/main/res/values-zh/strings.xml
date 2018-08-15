@@ -7,7 +7,8 @@
 
     <!--First Run Setup Wizard-->
     <string name="suw_wellcome_title">欢迎使用 RnOpenGApps</string>
-    <string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>
+    <!--<string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>-->
+    <string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。为 Android 9.0 所用的 OpenGApps 是由 Nezorflame 编译的非官方版.\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>
     <string name="suw_android_verison_title">Android 版本</string>
     <string name="suw_android_version">自动选择: Android</string>
     <string name="suw_cpu_title">CPU 平台</string>
@@ -42,10 +43,12 @@
     <string name="download_confirm_4">\n\n哪里错了么？点击向导来修正它们。</string>
     <string name="download">下载</string>
     <string name="correct">向导</string>
-    <string name="checkMD5">检查 MD5</string>
     <string name="wait">正在获取最新版本，请稍后。加载速度取决于你连接 Github 的速度...</string>
     <string name="notices">注意</string>
     <string name="notices_con">如果你不知道如何选择 GApps 包，点这儿看看。</string>
+    <string name="warning90">警告</string>
+    <string name="warning90_xda">XDA 帖子</string>
+    <string name="warning90_context">为 Android 9.0 所用的 OpenGApps 是由 Nezorflame 编译的非官方版，并且仍处于 ALPHA 测试状态，存在 bug 但会在未来修复。\n\n这也许会损坏您的设备</string>
 
 
     <!--About-->

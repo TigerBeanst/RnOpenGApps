@@ -5,9 +5,9 @@ android {
     defaultConfig {
         applicationId "com.jakting.opengapps"
         minSdkVersion 21
-        targetSdkVersion 26
-        versionCode 20180813
-        versionName "2.3"
+        targetSdkVersion 28
+        versionCode 20180815
+        versionName "2.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

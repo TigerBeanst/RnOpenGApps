@@ -7,6 +7,7 @@
 
     <!--First Run Setup Wizard-->
     <string name="suw_wellcome_title">Welcome to RnOpenGApps</string>
+    <!--<string name="suw_wellcome">This application uses resources from The OpenGApps Project (opengapps.org).\n\nIt will connect to Github to fetch info about latest OpenGApps package releases.\n\nDo not worry, you can configure package settings again by clicking \"Reset Wizard\" later.</string>-->
     <string name="suw_wellcome">This application uses resources from The OpenGApps Project (opengapps.org).\n\nIt will connect to Github to fetch info about latest OpenGApps package releases.\n\nDo not worry, you can configure package settings again by clicking \"Reset Wizard\" later.</string>
     <string name="suw_android_verison_title">Android Version</string>
     <string name="suw_android_version">Auto select: Android</string>
@@ -42,11 +43,12 @@
     <string name="download_confirm_4">\n\nIs there something wrong? Click WIZARD to correct them.</string>
     <string name="download">DOWNLOAD</string>
     <string name="correct">WIZARD</string>
-    <string name="checkMD5">CHECK MD5</string>
-    <string name="checkMD5_title">Check MD5 for</string>
     <string name="wait">Wait for getting the latest OpenGApps Version. The speed of loading depends on how fast you connect to Github...</string>
     <string name="notices">NOTICE</string>
     <string name="notices_con">If you do not know how to choose GApps Package, just click here.</string>
+    <string name="warning90">WARNING</string>
+    <string name="warning90_xda">XDA Thread</string>
+    <string name="warning90_context">OpenGApps for Android 9.0 is built by Nezorflame which is Unofficial, and it\'s in ALPHA quality right now, bugs are present and being fixed in the process.\n\nMay damage your device.</string>
 
 
     <!--About-->

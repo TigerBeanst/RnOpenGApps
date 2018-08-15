@@ -54,8 +54,16 @@ public class AllInAll {
         //根据当前设备 Google 套件的安装情况决定首页状态一栏的显示内容
         StateGApps.StateGApps(context, view);
 
-        //获取最新下载地址
-        GetLatest.GetLatest(context, view, data_of_download);
+        SharedPreferences av = context.getSharedPreferences("data",Context.MODE_PRIVATE);
+        String avv = av.getString("android_version", "");
+        if(avv.equals("")){
+            Log.d("debug","获取系统版本时出问题");
+        }else if(avv.equals("9.0")){
+            GetLatest90.GetLatest90(context,view,data_of_download);
+        }else{
+            //获取最新下载地址
+            GetLatest.GetLatest(context,view,data_of_download);
+        }
 
 
 

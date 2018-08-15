@@ -184,6 +184,7 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
         RadioButton a71 = (RadioButton) findViewById(R.id.Android71);
         RadioButton a80 = (RadioButton) findViewById(R.id.Android80);
         RadioButton a81 = (RadioButton) findViewById(R.id.Android81);
+        RadioButton a90 = (RadioButton) findViewById(R.id.Android90);
         if (osRel.equals("5.0")) {
             a50.setChecked(true);
         } else if (osRel.equals("5.1")) {

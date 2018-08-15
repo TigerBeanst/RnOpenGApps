@@ -7,7 +7,8 @@
 
     <!--First Run Setup Wizard-->
     <string name="suw_wellcome_title">Добро пожаловать RnOpenGApps</string>
-    <string name="suw_wellcome">Это приложение использует ресурсы с OpenGApps Project(opengapps.org).\n\nОн будет подключаться к Github, чтобы получить ссылку на  последнюю версию.\n\nНе волнуйтесь, вы можете настроить их снова, нажав на кнопку \"Мастер сброса\" позже.</string>
+    <!--<string name="suw_wellcome">Это приложение использует ресурсы с OpenGApps Project(opengapps.org).\n\nОн будет подключаться к Github, чтобы получить ссылку на  последнюю версию.\n\nНе волнуйтесь, вы можете настроить их снова, нажав на кнопку \"Мастер сброса\" позже.</string>-->
+    <string name="suw_wellcome">Это приложение использует ресурсы с OpenGApps Project(opengapps.org).\n\nОн будет подключаться к Github, чтобы получить ссылку на  последнюю версию.OpenGApps для Android 9.0 от Nezorframe (UNOFFICIAL).\n\nНе волнуйтесь, вы можете настроить их снова, нажав на кнопку \"Мастер сброса\" позже.</string>
     <string name="suw_android_verison_title">Версия Android</string>
     <string name="suw_android_version">Авто выбор: Android</string>
     <string name="suw_cpu_title">Версия CPU</string>
@@ -42,10 +43,12 @@
     <string name="download_confirm_4">\n\nЧто-то не так? Нажми Мастер установки чтобы исправить.</string>
     <string name="download">ЗАГРУЗКА</string>
     <string name="correct">Мастер</string>
-    <string name="checkMD5">ПРОВЕРЬТЕ MD5</string>
     <string name="wait">Дождитесь получения последней версии OpenGApps. Скорость загрузки зависит от скорости подключения к Github...</string>
     <string name="notices">Уведомления</string>
     <string name="notices_con">Если ты не знаешь какой выбрать архив GApps, просто нажми сюда.</string>
+    <string name="warning90">!! ВНИМАНИЕ !!</string>
+    <string name="warning90_xda">XDA тему</string>
+    <string name="warning90_context">OpenGApps для Android 9.0 от Nezorframe (UNOFFICIAL) и пока это ALPHA версия, присутствуют баги и своевременно исправляются в процессе доработки.\n\nДелайте на своей страх и риск!!</string>
 
 
     <!--About-->
