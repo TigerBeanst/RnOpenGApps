@@ -23,24 +23,24 @@ public class DonateFragment extends Fragment implements View.OnClickListener {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         getActivity().setTitle(R.string.donate);
-//        clickAlipay();
-//        clickGP();
+        clickAlipay();
+        clickGP();
     }
 
 
 
-    /*private void clickAlipay(){
+    private void clickAlipay(){
         LinearLayout alipay = (LinearLayout)getActivity().findViewById(R.id.alipay);
         alipay.setOnClickListener(this);
     }
     private void clickGP(){
         LinearLayout gp = (LinearLayout)getActivity().findViewById(R.id.google_play);
         gp.setOnClickListener(this);
-    }*/
+    }
 
     @Override
     public void onClick(View v) {
-        /*switch (v.getId()) {
+        switch (v.getId()) {
             case R.id.alipay:
                 Uri alipay_link = Uri.parse("https://qr.alipay.com/a6x09739oi8tn3iretpt0ef");
                 startActivity(new Intent(Intent.ACTION_VIEW,alipay_link));
@@ -51,6 +51,6 @@ public class DonateFragment extends Fragment implements View.OnClickListener {
                 break;
             default:
                 break;
-        }*/
+        }
     }
 }

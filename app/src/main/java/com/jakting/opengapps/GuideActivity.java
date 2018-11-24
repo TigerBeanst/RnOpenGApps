@@ -41,7 +41,7 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
     private static long lastClickTime = 0;
     SharedPreferences.Editor speditor;
     String osRelease = android.os.Build.VERSION.RELEASE; //Android 版本号
-    String osRel = osRelease.substring(0, 3);//截取前三位
+    String osRel;
     String osCPU = Build.CPU_ABI; //CPU 平台
     String osCPUU;
     String osVar = "micro";
@@ -124,6 +124,11 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
                 initLayout(viewGroup, R.layout.suw_android_verison, R.string.suw_android_verison_title, true);
                 getDeviceInfo();
                 TextView auto_andversion = (TextView) findViewById(R.id.auto_andversion);
+                if (osRelease.equals("9")) {
+                    osRel = "9.0";
+                } else {
+                    osRel = osRelease.substring(0, 3);//上面那个截取前三位
+                }
                 auto_andversion.setText(getString(R.string.suw_android_version) + " " + osRel);
                 editAndroidRadio();
                 RadioGroup radio_and = (RadioGroup) findViewById(R.id.radio_and);
@@ -132,6 +137,11 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
                     public void onCheckedChanged(RadioGroup radioGroup, int i) {
                         RadioButton rad_and = (RadioButton) findViewById(i);
                         String save_and = rad_and.getText().toString();
+                        if (osRelease.equals("9")) {
+                            osRel = "9.0";
+                        } else {
+                            osRel = osRelease.substring(0, 3);//上面那个截取前三位
+                        }
                         osRel = save_and.substring(8, 11);
                         if (osRel.equals("4.4")) {
                             SharedPreferences.Editor sharedPreferences = getSharedPreferences("data", MODE_PRIVATE).edit();
@@ -169,8 +179,8 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
                 break;
             case PAGE_FINAL:
                 initLayout(viewGroup, R.layout.suw_final, R.string.suw_final_title, true);
-//                clickAlipay();
-//                clickGP();
+                clickAlipay();
+                clickGP();
                 break;
         }
     }
@@ -185,6 +195,11 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
         RadioButton a80 = (RadioButton) findViewById(R.id.Android80);
         RadioButton a81 = (RadioButton) findViewById(R.id.Android81);
         RadioButton a90 = (RadioButton) findViewById(R.id.Android90);
+        if(osRelease.equals("9")){
+            osRel = "9.0";
+        }else{
+            osRel = osRelease.substring(0, 3);//上面那个截取前三位
+        }
         if (osRel.equals("5.0")) {
             a50.setChecked(true);
         } else if (osRel.equals("5.1")) {
@@ -199,6 +214,8 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
             a80.setChecked(true);
         } else if (osRel.equals("8.1")) {
             a81.setChecked(true);
+        } else if (osRel.equals("9.0")) {
+            a90.setChecked(true);
         }
 
     }
@@ -256,18 +273,18 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
         }
     }
 
-   /* private void clickAlipay(){
+    private void clickAlipay(){
         LinearLayout alipay = (LinearLayout)findViewById(R.id.alipay_f);
         alipay.setOnClickListener(this);
     }
     private void clickGP(){
         LinearLayout gp = (LinearLayout)findViewById(R.id.google_play_f);
         gp.setOnClickListener(this);
-    }*/
+    }
 
     @Override
     public void onClick(View view) {
-        /*switch (view.getId()) {
+        switch (view.getId()) {
             case R.id.alipay_f:
                 Uri alipay_linkf = Uri.parse("https://qr.alipay.com/a6x09739oi8tn3iretpt0ef");
                 startActivity(new Intent(Intent.ACTION_VIEW,alipay_linkf));
@@ -278,7 +295,7 @@ public class GuideActivity extends SetupWizardBaseActivity implements View.OnCli
                 break;
             default:
                 break;
-        }*/
+        }
     }
 
     @Override

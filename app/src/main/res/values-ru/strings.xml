@@ -7,8 +7,8 @@
 
     <!--First Run Setup Wizard-->
     <string name="suw_wellcome_title">Добро пожаловать RnOpenGApps</string>
-    <!--<string name="suw_wellcome">Это приложение использует ресурсы с OpenGApps Project(opengapps.org).\n\nОн будет подключаться к Github, чтобы получить ссылку на  последнюю версию.\n\nНе волнуйтесь, вы можете настроить их снова, нажав на кнопку \"Мастер сброса\" позже.</string>-->
-    <string name="suw_wellcome">Это приложение использует ресурсы с OpenGApps Project(opengapps.org).\n\nОн будет подключаться к Github, чтобы получить ссылку на  последнюю версию.OpenGApps для Android 9.0 от Nezorframe (UNOFFICIAL).\n\nНе волнуйтесь, вы можете настроить их снова, нажав на кнопку \"Мастер сброса\" позже.</string>
+    <string name="suw_wellcome">Это приложение использует ресурсы с OpenGApps Project(opengapps.org).\n\nОн будет подключаться к Github, чтобы получить ссылку на  последнюю версию.\n\nНе волнуйтесь, вы можете настроить их снова, нажав на кнопку \"Мастер сброса\" позже.</string>
+    <!--<string name="suw_wellcome">Это приложение использует ресурсы с OpenGApps Project(opengapps.org).\n\nОн будет подключаться к Github, чтобы получить ссылку на  последнюю версию.OpenGApps для Android 9.0 от Nezorframe (UNOFFICIAL).\n\nНе волнуйтесь, вы можете настроить их снова, нажав на кнопку \"Мастер сброса\" позже.</string>-->
     <string name="suw_android_verison_title">Версия Android</string>
     <string name="suw_android_version">Авто выбор: Android</string>
     <string name="suw_cpu_title">Версия CPU</string>
@@ -30,8 +30,19 @@
 
     <!--Main-->
     <string name="my_device">Мое устройство</string>
-    <string name="gapps_ok">GApps установлены!</string>
+    <string name="gapps_ok">GApps установлены!Нажмите здесь для подробностей</string>
     <string name="gapps_warning">GApps не установлен!</string>
+    <string name="gapps_details_error">Ваши GApps не выглядят как OpenGApps</string>
+    <string name="gapps_details_msg">Версия OpenGApps:</string>
+    <string name="gapps_details_title">Информация о OpenGApps:</string>
+    <string name="gapps_root">Предоставить права Root</string>
+    <string name="gapps_root_msg">Чтобы просмотреть сведения о GApps на вашем устройстве, приложению должны быть предоставлены привилегии Root.</string>
+    <string name="gapps_root_msg_get">дать</string>
+    <string name="gapps_root_msg_get_no">Возможно, ваше устройство не внедрено, или вам запрещен доступ к Root.</string>
+    <string name="gapps_root_msg_gett">RnOpenGApps получает права Root</string>
+    <string name="gapps_root_msg_no">отменен</string>
+    <string name="gapps_root_msg_noo">Вы отменили предоставление доступа Root</string>
+    <string name="gapps_root_msg_why">Зачем тебе Корень?</string>
     <string name="loading">Загрузка...</string>
     <string name="latest_release">Последний релиз для</string>
     <string name="latest_release_end">\nнажмите здесь,чтобы загрузить.</string>
@@ -62,9 +73,9 @@
     <string name="about_tran_ok">визит локализации</string>
 
     <!--Donate-->
-    <!--<string name="alipay">Alipay</string>
+    <string name="alipay">Alipay</string>
     <string name="alipay_click">Click here to open Alipay App.</string>
     <string name="google_play">Google Play Donation</string>
     <string name="google_play_click">Click here to open Google Play to donate.</string>
-    <string name="tem_dis">Temporarily Unsupported.</string>-->
+    <string name="tem_dis">Temporarily Unsupported.</string>
 </resources>

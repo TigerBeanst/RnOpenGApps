@@ -20,7 +20,12 @@ public class AllInAll {
 
         //Android 版本号
         String osRelease = android.os.Build.VERSION.RELEASE;
-        String osRel = osRelease.substring(0, 3);//上面那个截取前三位
+        String osRel;
+        if(osRelease.equals("9")){
+            osRel = osRelease;
+        }else{
+            osRel = osRelease.substring(0, 3);//上面那个截取前三位
+        }
 
         //设备型号
         String osModel = Build.MODEL;
@@ -58,8 +63,6 @@ public class AllInAll {
         String avv = av.getString("android_version", "");
         if(avv.equals("")){
             Log.d("debug","获取系统版本时出问题");
-        }else if(avv.equals("9.0")){
-            GetLatest90.GetLatest90(context,view,data_of_download);
         }else{
             //获取最新下载地址
             GetLatest.GetLatest(context,view,data_of_download);

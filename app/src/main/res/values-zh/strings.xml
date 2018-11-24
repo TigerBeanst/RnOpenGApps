@@ -7,15 +7,15 @@
 
     <!--First Run Setup Wizard-->
     <string name="suw_wellcome_title">欢迎使用 RnOpenGApps</string>
-    <!--<string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>-->
-    <string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。为 Android 9.0 所用的 OpenGApps 是由 Nezorflame 编译的非官方版.\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>
+    <string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>
+    <!--<string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。为 Android 9.0 所用的 OpenGApps 是由 Nezorflame 编译的非官方版.\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>-->
     <string name="suw_android_verison_title">Android 版本</string>
     <string name="suw_android_version">自动选择: Android</string>
     <string name="suw_cpu_title">CPU 平台</string>
     <string name="suw_cpu">自动选择:</string>
     <string name="suw_var_title">包类型</string>
     <string name="suw_final_title">祝贺你！</string>
-    <string name="suw_final">你已经配置好所有东西了！\n\n现在，开始下载 OpenGApps！\n\n如果你支持我的工作，在 Google Play 中给我个好评就行！\n\n五星怎么样 :)</string>
+    <string name="suw_final">你已经配置好所有东西了！\n\n现在，开始下载 OpenGApps！\n\n如果你支持我的工作，在 Google Play 中给我个好评！五星怎么样 :)\n\n或是……买个捐赠包？</string>
 
     <!--Drawer-->
     <string name="drawer_dev">由 hjthjthjt 开发</string>
@@ -30,8 +30,19 @@
 
     <!--Main-->
     <string name="my_device">我的设备</string>
-    <string name="gapps_ok">GApps 已被成功安装！</string>
+    <string name="gapps_ok">GApps 已被成功安装！点此查看详情</string>
     <string name="gapps_warning">GApps 没有被安装！</string>
+    <string name="gapps_details_error">你的 GApps 看起来并不是 OpenGApps</string>
+    <string name="gapps_details_msg">OpenGApps 版本：</string>
+    <string name="gapps_details_title">OpenGApps 详情：</string>
+    <string name="gapps_root">授予 Root 权限</string>
+    <string name="gapps_root_msg">为了查看你的设备中 GApps 的详情，应用必须被授予 Root 权限</string>
+    <string name="gapps_root_msg_get">授予</string>
+    <string name="gapps_root_msg_get_no">你的设备看起来尚未 Root，亦或是你禁止授予了 Root 权限</string>
+    <string name="gapps_root_msg_gett">氡·OpenGApps 被授予了 Root 权限</string>
+    <string name="gapps_root_msg_no">取消</string>
+    <string name="gapps_root_msg_noo">你取消了授予 Root 权限</string>
+    <string name="gapps_root_msg_why">为何需要 Root？</string>
     <string name="loading">加载中...</string>
     <string name="latest_release">最新版本，针对</string>
     <string name="latest_release_end">\n点击此处下载。</string>
@@ -62,9 +73,9 @@
     <string name="about_tran_ok">访问翻译页面</string>
 
     <!--Donate-->
-    <!--<string name="alipay">支付宝</string>
+    <string name="alipay">支付宝</string>
     <string name="alipay_click">点击此处打开支付宝应用</string>
     <string name="google_play">Google Play 捐赠包</string>
     <string name="google_play_click">点击此处打开 Google Play 来捐赠</string>
-    <string name="tem_dis">暂不支持。</string>-->
+    <string name="tem_dis">暂不支持。</string>
 </resources>

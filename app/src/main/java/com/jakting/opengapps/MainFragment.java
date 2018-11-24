@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -33,7 +34,7 @@ public class MainFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         getActivity().setTitle(R.string.app_name);
-        Context context = this.getActivity();
+        final Context context = this.getActivity();
         View view = this.getView();
         //程序启动时执行所需方法
         CardView do_card = (CardView) view.findViewById(R.id.state_latest);
@@ -44,8 +45,11 @@ public class MainFragment extends Fragment {
         clickGApps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri gappsurl =  Uri.parse("https://jakting.com/archives/gapps-links-what.html");
-                startActivity(new Intent(Intent.ACTION_VIEW,gappsurl));
+                String url = "https://jakting.com/archives/gapps-links-what.html";
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                builder.setToolbarColor(context.getResources().getColor(R.color.colorPrimary));
+                CustomTabsIntent customTabsIntent = builder.build();
+                customTabsIntent.launchUrl(context, Uri.parse(url));
             }
         });
 

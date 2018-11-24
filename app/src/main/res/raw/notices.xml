@@ -34,5 +34,11 @@
         <copyright>Copyright 2013 Philip Schiffer</copyright>
         <license>Apache Software License 2.0</license>
     </notice>
+    <notice>
+        <name>RootTools</name>
+        <url>https://github.com/Stericson/RootTools/</url>
+        <copyright>Copyright (c) 2012 Stephen Erickson, Chris Ravenscroft, Dominik Schuermann, Adam Shanks</copyright>
+        <license>Apache Software License 2.0 and GPL v2</license>
+    </notice>
 
 </notices>

@@ -28,10 +28,10 @@
                 android:id="@+id/nav_gapps"
                 android:icon="@drawable/ic_menu_google"
                 android:title="@string/gapps_version" />
-            <!--<item
+            <item
                 android:id="@+id/nav_donate"
                 android:icon="@drawable/ic_payment"
-                android:title="@string/donate" />-->
+                android:title="@string/donate" />
         </menu>
     </item>
 

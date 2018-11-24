@@ -117,6 +117,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gapps) {
             Uri gapps_link = Uri.parse("https://jakting.com/archives/gapps-links-what.html");
             startActivity(new Intent(Intent.ACTION_VIEW,gapps_link));
+        }else if (id == R.id.nav_donate) {
+            replaceFragment(new DonateFragment());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
