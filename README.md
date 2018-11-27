@@ -1,6 +1,7 @@
 # 氡·OpenGApps (Rn·OpenGApps)
 
 <a href='https://play.google.com/store/apps/details?id=com.jakting.opengapps&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Visit Google Play to download application' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="161.5" height="62.5"/></a> <a href='https://play.google.com/store/apps/details?id=com.jakting.opengapps&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='下载应用，请到 Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/zh-cn_badge_web_generic.png' width="161.5" height="62.5"/></a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fhjthjthjt%2FRnOpenGApps?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhjthjthjt%2FRnOpenGApps.svg?type=shield"/></a>
 
 Rn·OpenGApps is an application for downloading GApps packages. All of the packages come from The OpenGApps Project (opengapps.org). As the project [does not allow mirroring](http://opengapps.org/blog/post/2016/03/18/the-no-mirror-policy/), all download links of this application are from source repository's releases. \_(:з」∠)\_
 
@@ -8,3 +9,7 @@ Rn·OpenGApps is an application for downloading GApps packages. All of the packa
 
 Google Play and the Google Play logo are trademarks of Google LLC.  
 Google Play 和 Google Play 徽标均为 Google LLC 的商标。
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhjthjthjt%2FRnOpenGApps.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhjthjthjt%2FRnOpenGApps?ref=badge_large)
