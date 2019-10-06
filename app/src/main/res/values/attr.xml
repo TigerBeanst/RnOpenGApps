@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="rn_primary_color" format="color" />
+    <attr name="rn_primary_dark_color" format="color" />
+    <attr name="rn_primary_text_dark_color" format="color" />
+    <attr name="rn_background_color" format="color" />
+</resources>
