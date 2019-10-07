@@ -11,6 +11,8 @@ import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadLargeFileListener;
 import com.liulishuo.filedownloader.FileDownloader;
 
+import java.math.BigDecimal;
+
 import static com.stericson.RootTools.Constants.TAG;
 
 public class DownUtils {
@@ -28,6 +30,7 @@ public class DownUtils {
 
     public void downloadOpenGApps(final View root){
         FileDownloader.getImpl().create(download_url).setPath(file_name).setListener(new FileDownloadLargeFileListener() {
+            long before = 0;
             @Override
             protected void pending(BaseDownloadTask task, long soFarBytes, long totalBytes) {
 
@@ -37,7 +40,9 @@ public class DownUtils {
             protected void progress(BaseDownloadTask task, long soFarBytes, long totalBytes) {
                 TextView tx_progress = root.findViewById(R.id.text_progress);
                 int percent=(int) ((double) soFarBytes / (double) totalBytes * 100);
-                tx_progress.setText("("+percent+"%"+")");
+                int speed = (int) ((double) soFarBytes - (double)before);
+                before = soFarBytes;
+                tx_progress.setText("("+percent+"%"+")("+bytes2kb(soFarBytes)+"/"+bytes2kb(totalBytes)+")");
             }
 
             @Override
@@ -48,6 +53,8 @@ public class DownUtils {
             @Override
             protected void completed(BaseDownloadTask task) {
                 Log.d(TAG, "completed: 下载完毕");
+                TextView tx_progress = root.findViewById(R.id.text_progress);
+                tx_progress.setText("下载完毕");
 
             }
 
@@ -61,5 +68,18 @@ public class DownUtils {
 
             }
         }).start();
+    }
+
+    public static String bytes2kb(long bytes) {
+        BigDecimal filesize = new BigDecimal(bytes);
+        BigDecimal megabyte = new BigDecimal(1024 * 1024);
+        float returnValue = filesize.divide(megabyte, 2, BigDecimal.ROUND_UP)
+                .floatValue();
+        if (returnValue > 1)
+            return (returnValue + "MB");
+        BigDecimal kilobyte = new BigDecimal(1024);
+        returnValue = filesize.divide(kilobyte, 2, BigDecimal.ROUND_UP)
+                .floatValue();
+        return (returnValue + "KB");
     }
 }

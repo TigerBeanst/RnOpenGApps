@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">RnOpenGApps</string>
     <string name="opengapps">RnOpenGApps</string>
+    <string name="description">RnOpenGApps is an app to download GApps from The OpenGApps Project(opengapps.org).</string>
     <string name="title_device">Device</string>
     <string name="title_download">Download</string>
     <string name="title_about">About</string>
@@ -20,8 +21,14 @@
 
     <string name="text_download_chip_loading">Loading...</string>
     <string name="text_download_download">Download</string>
-    <string name="text_dialog_title_choose">Select download mode</string>
-    <string name="text_dialog_option_1">Download then Install</string>
+    <string name="text_dialog_title_choose">Select Download Mode</string>
+    <string name="text_dialog_option_1">Download and Install</string>
     <string name="text_dialog_option_2">Just Download</string>
-    <string name="text_dialog_option_3">Just Download</string>
+    <string name="text_dialog_option_3">External Download</string>
+
+
+    <string name="title_about_group_1">Version</string>
+    <string name="title_about_group_2">Developer</string>
+    <string name="title_about_group_3">Licenses</string>
+    <string name="text_1_opensource">Github Open Source</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.jakting.opengapps.ui.download;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -83,14 +84,38 @@ public class DownloadFragment extends Fragment implements View.OnClickListener{
     }
 
     public void clickDown(){
-        MaterialAlertDialogBuilder chooseDownloadMethod = new MaterialAlertDialogBuilder(getActivity())
-                .setTitle()
+        new MaterialAlertDialogBuilder(getActivity())
+                .setTitle(R.string.text_dialog_title_choose)
+                .setPositiveButton(R.string.text_dialog_option_1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        download();
+                    }
+                })
+                .setNegativeButton(R.string.text_dialog_option_2, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .setNeutralButton(R.string.text_dialog_option_3, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .show();
 
 
 
+
+
+    }
+
+    public void download(){
         FileDownloader.setup(getActivity());
-        DownUtils downUtils = new DownUtils("https://downloads.sourceforge.net/project/opengapps/arm64/20191001/open_gapps-arm64-9.0-micro-20191001.zip?r=&ts=1569937679&use_mirror=autoselect","open_gapps-arm64-9.0-tvstock-20190926.zip",getActivity());
+        //https://downloads.sourceforge.net/project/opengapps/arm64/20191001/open_gapps-arm64-9.0-micro-20191001.zip?r=&ts=1569937679&use_mirror=autoselect
+        DownUtils downUtils = new DownUtils("https://qd.myapp.com/myapp/qqteam/pcqq/PCQQ2019.exe","open_gapps-arm64-9.0-tvstock-20190926.zip",getActivity());
         downUtils.downloadOpenGApps(roott);
-
     }
 }
