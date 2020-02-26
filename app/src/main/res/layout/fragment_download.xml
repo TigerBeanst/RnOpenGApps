@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_pipeline"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_rocket_boy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/text_download_opengapps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/opengapps"
+                android:textSize="25sp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintEnd_toEndOf="@id/img_pipeline"
+                app:layout_constraintStart_toStartOf="@id/img_pipeline"
+                app:layout_constraintTop_toBottomOf="@+id/img_pipeline" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_opengapps_version_get"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                app:strokeWidth="3dp"
+                app:strokeColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="@id/text_download_opengapps"
+                app:layout_constraintStart_toStartOf="@id/text_download_opengapps"
+                app:layout_constraintTop_toBottomOf="@+id/text_download_opengapps">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <ProgressBar
+                        android:id="@+id/progress_circular"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:indeterminateTint="?android:attr/textColorPrimary"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_update"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_update_black_24dp"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_opengapps_version_get"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="0.5"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:text="@string/text_download_chip_loading"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/progress_circular"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner_download_variant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_download_chip_loading"
+                android:drawableLeft="@drawable/ic_merge_type_black_24dp"
+                app:ms_background_color="?attr/colorSurface"
+                android:drawableTint="?attr/colorControlNormal"
+                android:drawablePadding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_opengapps_version_get" />
+
+            <TextView
+                android:id="@+id/text_download_for"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textStyle="italic"
+                android:text="@string/text_download_waiting"
+                app:layout_constraintTop_toBottomOf="@id/spinner_download_variant" />
+
+            <TextView
+                android:id="@+id/text_download_unsupported"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textStyle="italic"
+                android:visibility="gone"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="OpenGApps doesn't support Android R now"
+                app:layout_constraintTop_toBottomOf="@id/text_download_for" />
+
+            <View
+                android:id="@+id/divider_device_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@id/text_download_unsupported" />
+
+            <LinearLayout
+                android:id="@+id/layout_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_device_1">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_gapps_blog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_download_blog"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_custom"
+                    app:icon="@drawable/ic_live_help_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_md5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_download_md5"
+                    app:icon="@drawable/ic_lightbulb_outline_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_md5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textStyle="italic"
+                android:text="@string/text_download_md5_long"
+                app:layout_constraintTop_toBottomOf="@id/layout_5" />
+
+            <View
+                android:id="@+id/divider_device_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@id/text_md5" />
+
+            <LinearLayout
+                android:id="@+id/layout_custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_device_2">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_download_cpu"
+                    android:hint="@string/text_download_chip_loading"
+                    android:drawableLeft="@drawable/ic_storage_black_24dp"
+                    app:ms_background_color="?attr/colorSurface"
+                    android:drawableTint="?attr/colorControlNormal"
+                    android:drawablePadding="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_download_version"
+                    android:hint="@string/text_download_chip_loading"
+                    android:drawableLeft="@drawable/ic_system_update_black_24dp"
+                    app:ms_background_color="?attr/colorSurface"
+                    android:drawableTint="?attr/colorControlNormal"
+                    android:drawablePadding="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/button_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_download_download"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        app:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_cloud_download_black_24dp"
+        app:iconTint="@color/white" />
+
+
+</RelativeLayout>

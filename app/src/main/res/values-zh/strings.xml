@@ -1,81 +1,57 @@
-<resources>
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">氡·OpenGApps</string>
+    <string name="opengapps">氡·OpenGApps</string>
+    <string name="developer">hjthjthjt</string>
+    <string name="description">氡·OpenGApps 是一个从 OpenGApps 项目(opengapps.org)中下载 GApps 卡刷包的应用。</string>
+    <string name="title_device">设备</string>
+    <string name="title_download">下载</string>
+    <string name="title_misc">杂项</string>
 
-    <string name="navigation_drawer_open">打开导航抽屉</string>
-    <string name="navigation_drawer_close">关闭导航抽屉</string>
-    <string name="action_reset">重置向导</string>
+    <string name="title_big_device">我的设备</string>
+    <string name="title_small_device_model">型号</string>
+    <string name="title_small_device_status">信息</string>
 
-    <!--First Run Setup Wizard-->
-    <string name="suw_wellcome_title">欢迎使用 RnOpenGApps</string>
-    <string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>
-    <!--<string name="suw_wellcome">此应用从 OpenGApps 项目(opengapps.org)获取资源。\n\n它将连接至 Github 来获取最新的 OpenGApps 版本下载地址。为 Android 9.0 所用的 OpenGApps 是由 Nezorflame 编译的非官方版.\n\n别担心，你可以稍后通过点击\"重置向导\"来再次配置包类型内容。</string>-->
-    <string name="suw_android_verison_title">Android 版本</string>
-    <string name="suw_android_version">自动选择: Android</string>
-    <string name="suw_cpu_title">CPU 平台</string>
-    <string name="suw_cpu">自动选择:</string>
-    <string name="suw_var_title">包类型</string>
-    <string name="suw_final_title">祝贺你！</string>
-    <string name="suw_final">你已经配置好所有东西了！\n\n现在，开始下载 OpenGApps！\n\n如果你支持我的工作，在 Google Play 中给我个好评！五星怎么样 :)\n\n或是……买个捐赠包？</string>
+    <string name="text_device_vendor">厂商</string>
+    <string name="text_device_model">型号</string>
+    <string name="text_device_cpu">CPU 芯片</string>
+    <string name="text_device_os">Android 版本</string>
+    <string name="text_device_os_unsupported">(不受支持)</string>
+    <string name="text_device_gms_yes">GApps 已被安装在您的设备中。</string>
+    <string name="text_device_gms_no">GApps 未被安装在您的设备中。</string>
+    <string name="text_device_opengapps_version">OpenGApps 版本</string>
+    <string name="text_device_check">检查</string>
+    <string name="text_device_check_fail">您的设备暂未 Root，亦或是您拒绝了应用申请 Root 权限。</string>
+    <string name="text_device_unknown">未安装 OpenGApps</string>
 
-    <!--Drawer-->
-    <string name="drawer_dev">由 hjthjthjt 开发</string>
-    <string name="menu_main">首页</string>
-    <string name="menu_device">设备</string>
-    <string name="menu_star">评分</string>
-    <string name="menu_star_message">为何不...给我个五星？</string>
-    <string name="menu_star_go">GO!</string>
-    <string name="menu_other">其它</string>
-    <string name="gapps_version">GApps 类型</string>
-    <string name="donate">捐助我！</string>
-
-    <!--Main-->
-    <string name="my_device">我的设备</string>
-    <string name="gapps_ok">GApps 已被成功安装！点此查看详情</string>
-    <string name="gapps_warning">GApps 没有被安装！</string>
-    <string name="gapps_details_error">你的 GApps 看起来并不是 OpenGApps</string>
-    <string name="gapps_details_msg">OpenGApps 版本：</string>
-    <string name="gapps_details_title">OpenGApps 详情：</string>
-    <string name="gapps_root">授予 Root 权限</string>
-    <string name="gapps_root_msg">为了查看你的设备中 GApps 的详情，应用必须被授予 Root 权限</string>
-    <string name="gapps_root_msg_get">授予</string>
-    <string name="gapps_root_msg_get_no">你的设备看起来尚未 Root，亦或是你禁止授予了 Root 权限</string>
-    <string name="gapps_root_msg_gett">氡·OpenGApps 被授予了 Root 权限</string>
-    <string name="gapps_root_msg_no">取消</string>
-    <string name="gapps_root_msg_noo">你取消了授予 Root 权限</string>
-    <string name="gapps_root_msg_why">为何需要 Root？</string>
-    <string name="loading">加载中...</string>
-    <string name="latest_release">最新版本，针对</string>
-    <string name="latest_release_end">\n点击此处下载。</string>
-    <string name="no_support">很抱歉，你的设备不受支持。</string>
-    <string name="download_confirm">下载确认</string>
-    <string name="download_confirm_1">点击下载按钮来享受这一切。\n\n在此之前，请确认这些信息。\n\nAndroid 版本-----</string>
-    <string name="download_confirm_2">\nCPU 平台-----</string>
-    <string name="download_confirm_3">\n包类型-----</string>
-    <string name="download_confirm_4">\n\n哪里错了么？点击向导来修正它们。</string>
-    <string name="download">下载</string>
-    <string name="correct">向导</string>
-    <string name="wait">正在获取最新版本，请稍后。加载速度取决于你连接 Github 的速度...</string>
-    <string name="notices">注意</string>
-    <string name="notices_con">如果你不知道如何选择 GApps 包，点这儿看看。</string>
-    <string name="warning90">警告</string>
-    <string name="warning90_xda">XDA 帖子</string>
-    <string name="warning90_context">为 Android 9.0 所用的 OpenGApps 是由 Nezorflame 编译的非官方版，并且仍处于 ALPHA 测试状态，存在 bug 但会在未来修复。\n\n这也许会损坏您的设备</string>
+    <string name="text_download_chip_loading">加载中…</string>
+    <string name="text_download_waiting">请稍等…</string>
+    <string name="text_download_pls">请选择…</string>
+    <string name="text_download_error">您暂未选择包类型。</string>
+    <string name="text_download_md5">MD5 检查</string>
+    <string name="text_download_md5_long">从 SourceForge 获取 MD5 值</string>
+    <string name="text_download_download">下载</string>
+    <string name="text_download_saf">请正确选择下载位置</string>
+    <string name="text_download_blog">GApps 包类型</string>
+    <string name="text_download_alert">适用于运行 Android %2$s 的 %1$s 设备</string>
+    <string name="text_download_alert_unsupport">OpenGApps 目前暂不支持 Android %1$s</string>
+    <string name="text_download_alert_unsupport_nowait">请选择其他的 CPU 平台及 Android 版本</string>
+    <string name="text_dialog_title_choose">下载模式</string>
+    <string name="text_dialog_msg_choose">当前配置：\n%1$s / Android %2$s / %3$s / %4$s\n\n如果您在使用「直接下载」时出现问题，请尝试用「外部下载」。</string>
+    <string name="text_dialog_option_1">直接下载</string>
+    <string name="text_dialog_option_2">外部下载</string>
+    <string name="text_button_finish">完成</string>
+    <string name="text_button_finish_snack">请务必记得检查 MD5 值</string>
+    <string name="text_button_continue">继续</string>
 
 
-    <!--About-->
-    <string name="title_about">关于</string>
-    <string name="about_version_label">版本</string>
-    <string name="about_developers_label">开发者</string>
-    <string name="about_libraries_label">使用的开源库</string>
-    <string name="about_source_label">Github 开源代码</string>
-    <string name="about_tran_label">帮助翻译</string>
-    <string name="about_tran_mess">你想让这个应用使用你的母语吗？为何不来帮助我翻译它！点击\"访问翻译页面\"来翻译它们。记得给我发个 Pull Request ！</string>
-    <string name="about_tran_ok">访问翻译页面</string>
+    <string name="title_misc_all">杂项</string>
+    <string name="title_misc_group_1">版本</string>
+    <string name="title_misc_group_2">开发者</string>
+    <string name="title_misc_license">开放源代码许可</string>
+    <string name="title_misc_open">开放源代码</string>
+    <string name="title_misc_donate">捐赠我！</string>
+    <string name="title_misc_star">给个 5★ 好评</string>
 
-    <!--Donate-->
-    <string name="alipay">支付宝</string>
-    <string name="alipay_click">点击此处打开支付宝应用</string>
-    <string name="google_play">Google Play 捐赠包</string>
-    <string name="google_play_click">点击此处打开 Google Play 来捐赠</string>
-    <string name="tem_dis">暂不支持。</string>
+
+    <string name="surver_url">https://forms.gle/bDHtAGVAdV9JZDQ9A</string>
 </resources>

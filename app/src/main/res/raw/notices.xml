@@ -17,28 +17,39 @@
   -->
 <notices>
     <notice>
-        <name>XposedInstaller</name>
-        <url>https://github.com/rovo89/XposedInstaller</url>
-        <copyright>Copyright 2013 rovo89, Tungstwenty</copyright>
+        <name>OpenGApps</name>
+        <url>https://github.com/opengapps/opengapps/</url>
+        <copyright>Copyright 2015 The Open GApps Team</copyright>
+        <license>GNU General Public License 3.0</license>
+    </notice>
+    <notice>
+        <name>Fetch</name>
+        <url>https://github.com/tonyofrancis/Fetch/</url>
+        <copyright>Copyright 2017 Tonyo Francis.</copyright>
         <license>Apache Software License 2.0</license>
     </notice>
     <notice>
-        <name>SetupWizardLib</name>
-        <url>https://github.com/OmicoAndroidLibrary/SetupWizardLib</url>
-        <copyright>Copyright (C) 2015 The Android Open Source Project/Copyright (C) 2017 Omico</copyright>
+        <name>okhttp</name>
+        <url>https://square.github.io/okhttp/</url>
+        <copyright>Copyright 2019 Square, Inc.</copyright>
         <license>Apache Software License 2.0</license>
     </notice>
     <notice>
-        <name>LicensesDialog</name>
-        <url>https://psdev.de/LicensesDialog/</url>
-        <copyright>Copyright 2013 Philip Schiffer</copyright>
+        <name>Gson</name>
+        <url>https://github.com/google/gson/</url>
+        <copyright>Copyright 2008 Google Inc.</copyright>
         <license>Apache Software License 2.0</license>
     </notice>
     <notice>
-        <name>RootTools</name>
-        <url>https://github.com/Stericson/RootTools/</url>
-        <copyright>Copyright (c) 2012 Stephen Erickson, Chris Ravenscroft, Dominik Schuermann, Adam Shanks</copyright>
-        <license>Apache Software License 2.0 and GPL v2</license>
+        <name>RootBeer</name>
+        <url>https://github.com/scottyab/rootbeer/</url>
+        <copyright>Copyright 2015, Scott Alexander-Bown, Mat Rollings</copyright>
+        <license>Apache Software License 2.0</license>
     </notice>
-
+    <notice>
+        <name>MaterialSpinner</name>
+        <url>https://github.com/jaredrummler/MaterialSpinner/</url>
+        <copyright>Copyright 2016 Jared Rummler</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
 </notices>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_bomb"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_thinking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <!--第一块-->
+        <TextView
+            android:id="@+id/text_misc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/title_misc_all"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/img_bomb"
+            app:layout_constraintStart_toStartOf="@id/img_bomb"
+            app:layout_constraintTop_toBottomOf="@+id/img_bomb" />
+
+        <View
+            android:id="@+id/divider_device_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/text_misc" />
+
+        <!--第二块-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/divider_device_1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.5"
+                android:hint="@string/title_misc_group_1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_app_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="0.5"
+                android:hint="@string/title_misc_group_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_app_dev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_misc_donate"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_1"
+            app:icon="@drawable/ic_attach_money_black_24dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_misc_star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_donate"
+            app:icon="@drawable/ic_sentiment_very_satisfied_black_24dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_licenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_misc_license"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_star"
+            app:icon="@drawable/ic_developer_mode_black_24dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_opensource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_misc_open"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_licenses"
+            app:icon="@drawable/ic_github"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

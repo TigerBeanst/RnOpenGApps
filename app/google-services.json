@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "733669184755",
+    "firebase_url": "https://jakting-opengapps.firebaseio.com",
+    "project_id": "jakting-opengapps",
+    "storage_bucket": "jakting-opengapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733669184755:android:affb8d9e8779111cd7d386",
+        "android_client_info": {
+          "package_name": "com.jakting.opengapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733669184755-4ksgerg8d53i0gk8gkogpthnr8dpvc8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jakting.opengapps",
+            "certificate_hash": "2d521f6034e64e6d1869bbcbabc37d1ce0ca86ea"
+          }
+        },
+        {
+          "client_id": "733669184755-uoks5bk7bjmrtet8cc1rlet3jo2cefu7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jakting.opengapps",
+            "certificate_hash": "19775111b88991e47f1a102916dc0ef81f0aa9d3"
+          }
+        },
+        {
+          "client_id": "733669184755-mcpsbti5u1t3a1v4uki9anh8nuo5qbv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPdGGJZPn7iYlXxehJnusjp5cKxaa-lqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733669184755-mcpsbti5u1t3a1v4uki9anh8nuo5qbv3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

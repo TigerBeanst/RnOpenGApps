@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_device">
+
+    <fragment
+        android:id="@+id/navigation_device"
+        android:name="com.jakting.opengapps.ui.device.DeviceFragment"
+        android:label="@string/title_device"
+        tools:layout="@layout/fragment_device" />
+
+    <fragment
+        android:id="@+id/navigation_download"
+        android:name="com.jakting.opengapps.ui.download.DownloadFragment"
+        android:label="@string/title_download"
+        tools:layout="@layout/fragment_download" />
+
+    <fragment
+        android:id="@+id/navigation_misc"
+        android:name="com.jakting.opengapps.ui.misc.MiscFragment"
+        android:label="@string/title_misc"
+        tools:layout="@layout/fragment_misc" />
+</navigation>
